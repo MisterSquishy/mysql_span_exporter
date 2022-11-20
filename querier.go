@@ -41,4 +41,5 @@ func query() {
 		panic(err)
 	}
 	span.AddEvent("i did it")
+	fmt.Printf("created a new query span with id %s\n", span.SpanContext().SpanID())
 }

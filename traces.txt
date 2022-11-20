@@ -1,8 +1,8 @@
 {
 	"Name": "query",
 	"SpanContext": {
-		"TraceID": "ce5ab9f20fa241025db7c2243b23221d",
-		"SpanID": "9d93b260f65d7b11",
+		"TraceID": "2de3895f16e05600434c6b8f5b8dce3a",
+		"SpanID": "5e3fe3e744fe5ae4",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -15,27 +15,27 @@
 		"Remote": false
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:51:00.671649-05:00",
-	"EndTime": "2022-11-20T09:51:00.675041042-05:00",
+	"StartTime": "2022-11-20T11:01:37.39345-05:00",
+	"EndTime": "2022-11-20T11:01:37.397140012-05:00",
 	"Attributes": null,
 	"Events": [
 		{
 			"Name": "ima connect now",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T09:51:00.671667-05:00"
+			"Time": "2022-11-20T11:01:37.393471-05:00"
 		},
 		{
 			"Name": "ima do a query now",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T09:51:00.674704-05:00"
+			"Time": "2022-11-20T11:01:37.396873-05:00"
 		},
 		{
 			"Name": "i did it",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T09:51:00.675023-05:00"
+			"Time": "2022-11-20T11:01:37.397089-05:00"
 		}
 	],
 	"Links": null,
@@ -58,7 +58,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "38f5973da8170ea8004ba10c87807f23",
-		"SpanID": "1a909474627e8336",
+		"SpanID": "b6f3dfedd0cbf93f",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -71,14 +71,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:41:34.688828Z",
-	"EndTime": "2022-11-19T23:41:34.688967Z",
+	"StartTime": "2022-11-19T23:41:34.689789Z",
+	"EndTime": "2022-11-19T23:41:34.689928Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-38f5973da8170ea8004ba10c87807f23-8f4ea101e18b0b0a-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -103,7 +124,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "2653ed32ad62005f65f3b0d615b7fbd6",
-		"SpanID": "417f90975690b6af",
+		"SpanID": "2facc5d3adbfba55",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -116,14 +137,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:41:36.339847Z",
-	"EndTime": "2022-11-19T23:41:36.34005Z",
+	"StartTime": "2022-11-19T23:41:36.340808Z",
+	"EndTime": "2022-11-19T23:41:36.341011Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-2653ed32ad62005f65f3b0d615b7fbd6-8d35c560cfdce2bd-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -148,7 +190,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8dfb7af4740e1ca613fb51e52aba6a12",
-		"SpanID": "eacacf9e634fc602",
+		"SpanID": "ae16cb54ffc9d940",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -161,14 +203,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:41:37.539244Z",
-	"EndTime": "2022-11-19T23:41:37.539377Z",
+	"StartTime": "2022-11-19T23:41:37.540205Z",
+	"EndTime": "2022-11-19T23:41:37.540338Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-8dfb7af4740e1ca613fb51e52aba6a12-413e08d26cb61874-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -193,7 +256,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "2acab5be42f7c1d761c1fc89f9fe219c",
-		"SpanID": "4f88c798ae032358",
+		"SpanID": "3201bd010a677b39",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -206,14 +269,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:42:11.104991Z",
-	"EndTime": "2022-11-19T23:42:11.105131Z",
+	"StartTime": "2022-11-19T23:42:11.105952Z",
+	"EndTime": "2022-11-19T23:42:11.106092Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-2acab5be42f7c1d761c1fc89f9fe219c-8fd62bc8b0cb903f-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -238,7 +322,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b84123c7098f48d1551a1a297795fdc6",
-		"SpanID": "c4db046694f60e13",
+		"SpanID": "8fc5128c025a3c92",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -251,14 +335,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:42:13.214897Z",
-	"EndTime": "2022-11-19T23:42:13.215013Z",
+	"StartTime": "2022-11-19T23:42:13.215858Z",
+	"EndTime": "2022-11-19T23:42:13.215974Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-b84123c7098f48d1551a1a297795fdc6-5336130548d6327a-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -283,7 +388,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "e3b14876427058c8b5450a95ea4343a1",
-		"SpanID": "7f1a88a69d05d145",
+		"SpanID": "8c0efff395086e93",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -296,14 +401,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:42:57.387863Z",
-	"EndTime": "2022-11-19T23:42:57.388087Z",
+	"StartTime": "2022-11-19T23:42:57.388824Z",
+	"EndTime": "2022-11-19T23:42:57.389048Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-e3b14876427058c8b5450a95ea4343a1-37fd759a0021560e-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -328,7 +454,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "9fa23e29acc5e7699160e8e2c540e512",
-		"SpanID": "028836815a840eda",
+		"SpanID": "9da2af6300f03678",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -341,14 +467,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:43:20.087758Z",
-	"EndTime": "2022-11-19T23:43:20.087871Z",
+	"StartTime": "2022-11-19T23:43:20.088719Z",
+	"EndTime": "2022-11-19T23:43:20.088832Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-9fa23e29acc5e7699160e8e2c540e512-23523e10c33677bd-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -373,7 +520,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "25e1bd330f56fc2b7ee54c516ccb2227",
-		"SpanID": "b24cbdf5d8fdca3c",
+		"SpanID": "eb9719e23adf97b7",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -386,14 +533,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:58:45.373214Z",
-	"EndTime": "2022-11-19T23:58:45.373362Z",
+	"StartTime": "2022-11-19T23:58:45.374175Z",
+	"EndTime": "2022-11-19T23:58:45.374323Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-25e1bd330f56fc2b7ee54c516ccb2227-765e4ecf271aa3af-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -418,7 +586,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "a17724ac13ad3522db3636cd1796fe7d",
-		"SpanID": "08a617b370d8f37a",
+		"SpanID": "977f1a511ef3fe89",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -431,14 +599,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:01:54.22183Z",
-	"EndTime": "2022-11-20T00:01:54.221967Z",
+	"StartTime": "2022-11-20T00:01:54.222791Z",
+	"EndTime": "2022-11-20T00:01:54.222928Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-a17724ac13ad3522db3636cd1796fe7d-8691d0c05417ab4f-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -463,7 +652,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "267f24e4f0ca3a7d79e31ce62cda65bf",
-		"SpanID": "e19282b7ad9543f9",
+		"SpanID": "8eb27d1287e0e943",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -476,14 +665,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:03:49.725521Z",
-	"EndTime": "2022-11-20T00:03:49.725816Z",
+	"StartTime": "2022-11-20T00:03:49.726482Z",
+	"EndTime": "2022-11-20T00:03:49.726777Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-267f24e4f0ca3a7d79e31ce62cda65bf-2f6b2d11cebc643a-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -508,7 +718,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "d5fb71bfe5ea30924981e0b8a5160796",
-		"SpanID": "e108d4892aa036a4",
+		"SpanID": "ac9fef7a1613ac64",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -521,14 +731,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:05:29.625616Z",
-	"EndTime": "2022-11-20T00:05:29.625767Z",
+	"StartTime": "2022-11-20T00:05:29.626577Z",
+	"EndTime": "2022-11-20T00:05:29.626728Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-d5fb71bfe5ea30924981e0b8a5160796-9a8fe48fd0d0c901-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -553,7 +784,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ffd65a15cb19c73b82ca008a0fe21704",
-		"SpanID": "dcf9d621b0616576",
+		"SpanID": "b11de9c70e375b7d",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -566,14 +797,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:06:03.260238Z",
-	"EndTime": "2022-11-20T00:06:03.260421Z",
+	"StartTime": "2022-11-20T00:06:03.261199Z",
+	"EndTime": "2022-11-20T00:06:03.261382Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-ffd65a15cb19c73b82ca008a0fe21704-4563b027e68cd104-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -598,7 +850,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "01523a5ae5245f5239e52873183cfd03",
-		"SpanID": "3dd8777c48187584",
+		"SpanID": "7ca3b34e0337aa82",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -611,14 +863,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:08:54.674677Z",
-	"EndTime": "2022-11-20T00:08:54.674834Z",
+	"StartTime": "2022-11-20T00:08:54.675638Z",
+	"EndTime": "2022-11-20T00:08:54.675795Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-01523a5ae5245f5239e52873183cfd03-b7ac2ca9d27cc4c0-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -643,7 +916,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "6b8dcccb8299bb3eb33370eb8d881a4a",
-		"SpanID": "e1c6660265382613",
+		"SpanID": "c6a903ce19b16956",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -656,14 +929,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:10:07.208242Z",
-	"EndTime": "2022-11-20T00:10:07.208424Z",
+	"StartTime": "2022-11-20T00:10:07.209203Z",
+	"EndTime": "2022-11-20T00:10:07.209385Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-6b8dcccb8299bb3eb33370eb8d881a4a-0df10e3babcdbc2b-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -688,7 +982,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "6f73f90b113897eebacfc156724efc34",
-		"SpanID": "bc6cd87e81c9ff5b",
+		"SpanID": "a10fb628aab07cd4",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -701,14 +995,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:12:10.532838Z",
-	"EndTime": "2022-11-20T00:12:10.532989Z",
+	"StartTime": "2022-11-20T00:12:10.533799Z",
+	"EndTime": "2022-11-20T00:12:10.53395Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-6f73f90b113897eebacfc156724efc34-284f4cded4a01595-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -733,7 +1048,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ba927715995e74f79f5fd3461cdaf6fd",
-		"SpanID": "533aa1157254275f",
+		"SpanID": "74af0a05f7afe73e",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -746,14 +1061,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:48:14.367837Z",
-	"EndTime": "2022-11-20T09:48:14.368358Z",
+	"StartTime": "2022-11-20T09:48:14.368798Z",
+	"EndTime": "2022-11-20T09:48:14.369319Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-ba927715995e74f79f5fd3461cdaf6fd-a5393bdbddfe6453-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -778,7 +1114,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8e8573c72f480589e9061df68b9c4b0e",
-		"SpanID": "8da4ca37f8a9b3ee",
+		"SpanID": "6f5fa6907d24f50b",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -791,14 +1127,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:48:31.772172Z",
-	"EndTime": "2022-11-20T09:48:31.772344Z",
+	"StartTime": "2022-11-20T09:48:31.773133Z",
+	"EndTime": "2022-11-20T09:48:31.773305Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-8e8573c72f480589e9061df68b9c4b0e-62d7690f7ecea18d-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -823,7 +1180,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "3e9cc0f9c67fc6d8b8f8523b614cdb1f",
-		"SpanID": "3d1e5b3de57f0d20",
+		"SpanID": "42fb2e02017f9e31",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -836,14 +1193,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:50:45.232805Z",
-	"EndTime": "2022-11-20T09:50:45.233164Z",
+	"StartTime": "2022-11-20T09:50:45.233766Z",
+	"EndTime": "2022-11-20T09:50:45.234125Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-3e9cc0f9c67fc6d8b8f8523b614cdb1f-30b8260cc8aed5ff-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -868,7 +1246,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "5a135666a3717723c56c60c752938a7e",
-		"SpanID": "42d5f9d5757361a6",
+		"SpanID": "abe4d6ed635bc9e8",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -881,14 +1259,35 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:50:54.657252Z",
-	"EndTime": "2022-11-20T09:50:54.65744Z",
+	"StartTime": "2022-11-20T09:50:54.658213Z",
+	"EndTime": "2022-11-20T09:50:54.658401Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-5a135666a3717723c56c60c752938a7e-199505cf25a89fbb-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
@@ -913,7 +1312,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ce5ab9f20fa241025db7c2243b23221d",
-		"SpanID": "ad0787a195632942",
+		"SpanID": "41d65acdcd0d2edc",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -926,14 +1325,2279 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:51:00.673589Z",
-	"EndTime": "2022-11-20T09:51:00.673766Z",
+	"StartTime": "2022-11-20T09:51:00.67455Z",
+	"EndTime": "2022-11-20T09:51:00.674727Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-ce5ab9f20fa241025db7c2243b23221d-9d93b260f65d7b11-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "d065ce5a36a784400d6bef4e1ebbc63b",
+		"SpanID": "9ada83a1626d14b3",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "d065ce5a36a784400d6bef4e1ebbc63b",
+		"SpanID": "16edcc734dc8b7c9",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:19:58.782813Z",
+	"EndTime": "2022-11-20T10:19:58.783126Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-d065ce5a36a784400d6bef4e1ebbc63b-16edcc734dc8b7c9-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "b8e9d60ee71bb88b8046299a1574ac20",
+		"SpanID": "95a611585c47c515",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "b8e9d60ee71bb88b8046299a1574ac20",
+		"SpanID": "25f91194256666c7",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:20:44.223493Z",
+	"EndTime": "2022-11-20T10:20:44.223652Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-b8e9d60ee71bb88b8046299a1574ac20-25f91194256666c7-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "1a6b3fa0e9138aee3fde4dfff2f4d497",
+		"SpanID": "4a88ad5bc787d59c",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "1a6b3fa0e9138aee3fde4dfff2f4d497",
+		"SpanID": "067b82751bf377e6",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:21:03.885486Z",
+	"EndTime": "2022-11-20T10:21:03.885827Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-1a6b3fa0e9138aee3fde4dfff2f4d497-067b82751bf377e6-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "8427810834c2f0cc1ab1a09afd30de8c",
+		"SpanID": "1158bc9b597f4d93",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "8427810834c2f0cc1ab1a09afd30de8c",
+		"SpanID": "423f8f114c9ba647",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:25:27.459239Z",
+	"EndTime": "2022-11-20T10:25:27.459381Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-8427810834c2f0cc1ab1a09afd30de8c-423f8f114c9ba647-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "b5c7e6c70d3c4158bcd64c76e99002bc",
+		"SpanID": "64f9f635c3f56e02",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "b5c7e6c70d3c4158bcd64c76e99002bc",
+		"SpanID": "40e094ae1551a7d6",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:27:30.906342Z",
+	"EndTime": "2022-11-20T10:27:30.90649Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-b5c7e6c70d3c4158bcd64c76e99002bc-40e094ae1551a7d6-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "e3751534efa0fe8a8e9401b39fab994c",
+		"SpanID": "f6b8d7aa994b6ad0",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "e3751534efa0fe8a8e9401b39fab994c",
+		"SpanID": "be6455bdcec2126b",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:28:07.489921Z",
+	"EndTime": "2022-11-20T10:28:07.490035Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-e3751534efa0fe8a8e9401b39fab994c-be6455bdcec2126b-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "8c7ab6a69b7533ad4da483f4788eb95b",
+		"SpanID": "b570cce092af6a83",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "8c7ab6a69b7533ad4da483f4788eb95b",
+		"SpanID": "f962b51c45ac8e13",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:28:53.520683Z",
+	"EndTime": "2022-11-20T10:28:53.520818Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-8c7ab6a69b7533ad4da483f4788eb95b-f962b51c45ac8e13-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "7b5e60057f2a69d1e0ad928881f8e1f0",
+		"SpanID": "b9f69cf6058ba2aa",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "7b5e60057f2a69d1e0ad928881f8e1f0",
+		"SpanID": "157d7a1f96d7fb9e",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:29:26.204937Z",
+	"EndTime": "2022-11-20T10:29:26.205053Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-7b5e60057f2a69d1e0ad928881f8e1f0-157d7a1f96d7fb9e-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "0ef45ae31de19641cb3660f4babd36cb",
+		"SpanID": "9b66ba6f59f6f9e7",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "0ef45ae31de19641cb3660f4babd36cb",
+		"SpanID": "37746a522cccffce",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:30:57.939443Z",
+	"EndTime": "2022-11-20T10:30:57.939599Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-0ef45ae31de19641cb3660f4babd36cb-37746a522cccffce-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "d3e833fadc15d58678c31aa673bd4217",
+		"SpanID": "0152b728c30e34f1",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "d3e833fadc15d58678c31aa673bd4217",
+		"SpanID": "96c8baa253307ae7",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:31:04.11016Z",
+	"EndTime": "2022-11-20T10:31:04.110396Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-d3e833fadc15d58678c31aa673bd4217-96c8baa253307ae7-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "58333f144be36295558c8a86d0ffc81f",
+		"SpanID": "91a20fa872f414c7",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "58333f144be36295558c8a86d0ffc81f",
+		"SpanID": "a641e334ce1a8ae0",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:31:40.546017Z",
+	"EndTime": "2022-11-20T10:31:40.546133Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-58333f144be36295558c8a86d0ffc81f-a641e334ce1a8ae0-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "b69b553e96680aba57967b4758089d98",
+		"SpanID": "3fc800076ff1e28c",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "b69b553e96680aba57967b4758089d98",
+		"SpanID": "c1e0276ab4a5c052",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:31:58.770478Z",
+	"EndTime": "2022-11-20T10:31:58.770631Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-b69b553e96680aba57967b4758089d98-c1e0276ab4a5c052-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "7cfcafa5547b76466a95586e24fdf338",
+		"SpanID": "c6877641ae17e28a",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "7cfcafa5547b76466a95586e24fdf338",
+		"SpanID": "69ab067786bb0f3d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:32:07.201963Z",
+	"EndTime": "2022-11-20T10:32:07.202105Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-7cfcafa5547b76466a95586e24fdf338-69ab067786bb0f3d-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "b60013106f15424331b745f96b36c39d",
+		"SpanID": "0b4213ad3d965dcb",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "b60013106f15424331b745f96b36c39d",
+		"SpanID": "297486c83a24a46f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:34:09.848377Z",
+	"EndTime": "2022-11-20T10:34:09.84852Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-b60013106f15424331b745f96b36c39d-297486c83a24a46f-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "e3c473b7d2ba277183be0f1da4a1c6b7",
+		"SpanID": "d712e9c1af874a0d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "e3c473b7d2ba277183be0f1da4a1c6b7",
+		"SpanID": "f7fa4da605f32523",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:34:15.948206Z",
+	"EndTime": "2022-11-20T10:34:15.94832Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-e3c473b7d2ba277183be0f1da4a1c6b7-f7fa4da605f32523-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "44791f14e5f03e9bdcb65678b1c7f43f",
+		"SpanID": "a090420c82f36b35",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "44791f14e5f03e9bdcb65678b1c7f43f",
+		"SpanID": "89220c616b84f017",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:34:28.755265Z",
+	"EndTime": "2022-11-20T10:34:28.755382Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-44791f14e5f03e9bdcb65678b1c7f43f-89220c616b84f017-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "19924add6ad538abb7279b66d9b4e749",
+		"SpanID": "b0d50bf95b1e8a94",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "19924add6ad538abb7279b66d9b4e749",
+		"SpanID": "78ead5676334863e",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:35:52.060777Z",
+	"EndTime": "2022-11-20T10:35:52.060918Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-19924add6ad538abb7279b66d9b4e749-78ead5676334863e-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "a9b65fcae5b1100e416418699fcac33c",
+		"SpanID": "8fa287efb773f51d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "a9b65fcae5b1100e416418699fcac33c",
+		"SpanID": "f35e22f80f0cd611",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:36:09.955604Z",
+	"EndTime": "2022-11-20T10:36:09.955717Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-a9b65fcae5b1100e416418699fcac33c-f35e22f80f0cd611-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "392246294e3af1f19a8e2a82ac87e8b7",
+		"SpanID": "1eac020fa74a8f49",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "392246294e3af1f19a8e2a82ac87e8b7",
+		"SpanID": "52b17c816209106f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:36:41.597303Z",
+	"EndTime": "2022-11-20T10:36:41.597418Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-392246294e3af1f19a8e2a82ac87e8b7-52b17c816209106f-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "bedbbc4d9f3896d74299ba26b27aa17b",
+		"SpanID": "09ad144e914b3d85",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "bedbbc4d9f3896d74299ba26b27aa17b",
+		"SpanID": "e91f8bf051c68a42",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:36:54.618018Z",
+	"EndTime": "2022-11-20T10:36:54.618167Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-bedbbc4d9f3896d74299ba26b27aa17b-e91f8bf051c68a42-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "be3e761bb50e88d5d3ab600cbaea63c3",
+		"SpanID": "5d0641cf4d8f83e2",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "be3e761bb50e88d5d3ab600cbaea63c3",
+		"SpanID": "b081f67b47473b18",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:37:09.574269Z",
+	"EndTime": "2022-11-20T10:37:09.574401Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-be3e761bb50e88d5d3ab600cbaea63c3-b081f67b47473b18-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "55437d1615bb9ca4ed041aee628e9ac0",
+		"SpanID": "f5436d7667e8ba9d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "55437d1615bb9ca4ed041aee628e9ac0",
+		"SpanID": "4de824a75bed8319",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:37:27.873464Z",
+	"EndTime": "2022-11-20T10:37:27.873578Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-55437d1615bb9ca4ed041aee628e9ac0-4de824a75bed8319-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "b1c660cacbe9301188380c8be964c804",
+		"SpanID": "bf4264b6896ade9d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "b1c660cacbe9301188380c8be964c804",
+		"SpanID": "76d29c10254a5d32",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:37:40.693406Z",
+	"EndTime": "2022-11-20T10:37:40.693523Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-b1c660cacbe9301188380c8be964c804-76d29c10254a5d32-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "99b95346b426bad2823a596a6f91af1e",
+		"SpanID": "d7e46b080ce1eea8",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "99b95346b426bad2823a596a6f91af1e",
+		"SpanID": "d2bf77266772cb1a",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:38:03.977401Z",
+	"EndTime": "2022-11-20T10:38:03.977525Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-99b95346b426bad2823a596a6f91af1e-d2bf77266772cb1a-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "fcdac00adc604d46661c4e0420a3eced",
+		"SpanID": "6954119f70373754",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "fcdac00adc604d46661c4e0420a3eced",
+		"SpanID": "7282ba3b1cd0b3f6",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:38:18.416872Z",
+	"EndTime": "2022-11-20T10:38:18.417017Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-fcdac00adc604d46661c4e0420a3eced-7282ba3b1cd0b3f6-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "a6094d1b2bf681767354973df253abd1",
+		"SpanID": "da9840fe036a22e8",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "a6094d1b2bf681767354973df253abd1",
+		"SpanID": "102fbca83691ab26",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:49:14.526464Z",
+	"EndTime": "2022-11-20T10:49:14.526637Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-a6094d1b2bf681767354973df253abd1-102fbca83691ab26-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "059e755285008cc3149d163624628502",
+		"SpanID": "48804e454f4398c3",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "059e755285008cc3149d163624628502",
+		"SpanID": "bd90febcc7794b8e",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:55:00.483959Z",
+	"EndTime": "2022-11-20T10:55:00.484108Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-059e755285008cc3149d163624628502-bd90febcc7794b8e-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "95012ec12d41bb4c011defb43d74f6be",
+		"SpanID": "72beaec66b382749",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "95012ec12d41bb4c011defb43d74f6be",
+		"SpanID": "1e4b7327be1a8dbb",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:55:07.5931Z",
+	"EndTime": "2022-11-20T10:55:07.593215Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-95012ec12d41bb4c011defb43d74f6be-1e4b7327be1a8dbb-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "681a214b709510b393a56bd88c6a57a9",
+		"SpanID": "9e1e38cb9ddf63e4",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "681a214b709510b393a56bd88c6a57a9",
+		"SpanID": "7f6c1150f18c4b1f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:57:24.349517Z",
+	"EndTime": "2022-11-20T10:57:24.349659Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-681a214b709510b393a56bd88c6a57a9-7f6c1150f18c4b1f-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "ed270dfb28db7cf8009490fb115148c0",
+		"SpanID": "7fdf74dd9dabb00a",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "ed270dfb28db7cf8009490fb115148c0",
+		"SpanID": "f766c1ab5a234cd1",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:57:29.325Z",
+	"EndTime": "2022-11-20T10:57:29.325147Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-ed270dfb28db7cf8009490fb115148c0-f766c1ab5a234cd1-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "cc233b758d8a24a1101139d7c91fc5b6",
+		"SpanID": "539732cf3b025d28",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "cc233b758d8a24a1101139d7c91fc5b6",
+		"SpanID": "830e6ba6cc914995",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T10:59:03.360348Z",
+	"EndTime": "2022-11-20T10:59:03.36049Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-cc233b758d8a24a1101139d7c91fc5b6-830e6ba6cc914995-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "0ed7958df6ef9681e04a379120262555",
+		"SpanID": "6a9c3680ab8cd64f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "0ed7958df6ef9681e04a379120262555",
+		"SpanID": "9b836fe8d06bdb05",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:01:08.660988Z",
+	"EndTime": "2022-11-20T11:01:08.661106Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-0ed7958df6ef9681e04a379120262555-9b836fe8d06bdb05-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "8f62b34a2a8bfa6cfa301c65451e7832",
+		"SpanID": "f6532597ceb09b96",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "8f62b34a2a8bfa6cfa301c65451e7832",
+		"SpanID": "bad1dda0fd461df3",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:01:19.374832Z",
+	"EndTime": "2022-11-20T11:01:19.374975Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-8f62b34a2a8bfa6cfa301c65451e7832-bad1dda0fd461df3-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "2de3895f16e05600434c6b8f5b8dce3a",
+		"SpanID": "ed7f5d42f1ea8d68",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "2de3895f16e05600434c6b8f5b8dce3a",
+		"SpanID": "5e3fe3e744fe5ae4",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:01:37.396722Z",
+	"EndTime": "2022-11-20T11:01:37.396855Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-2de3895f16e05600434c6b8f5b8dce3a-5e3fe3e744fe5ae4-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
 			}
 		}
 	],
