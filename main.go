@@ -15,6 +15,8 @@ import (
 	"github.com/jmoiron/sqlx"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"
+	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
 	"go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/sdk/resource"
@@ -23,9 +25,19 @@ import (
 	oteltrace "go.opentelemetry.io/otel/trace"
 )
 
-// prepend traceparent info as a comment in SQL_TEXT
-// scrape this table
-// generate spans for each event
+var tracer oteltrace.Tracer
+
+func newGRPCExporter(ctx context.Context) (*otlptrace.Exporter, error) {
+	var headers = map[string]string{
+		"lightstep-access-token": "EcBjBBDRmEx/0rSEEjwaDmu17kRjCNYDoErvoqsLSd+/ZpOE0tWr6cv/wVW5+WShxA+cg/f1T6t2gsnhjqFStbuiwhnfFf0LirNMRyr9",
+	}
+
+	client := otlptracegrpc.NewClient(
+		otlptracegrpc.WithHeaders(headers),
+		otlptracegrpc.WithEndpoint("ingest.lightstep.com:443"),
+	)
+	return otlptrace.New(ctx, client)
+}
 
 func newExporter(w io.Writer) (trace.SpanExporter, error) {
 	return stdouttrace.New(
@@ -36,16 +48,12 @@ func newExporter(w io.Writer) (trace.SpanExporter, error) {
 }
 
 func newResource() *resource.Resource {
-	r, _ := resource.Merge(
-		resource.Default(),
-		resource.NewWithAttributes(
-			semconv.SchemaURL,
-			semconv.ServiceNameKey.String("fib"),
-			semconv.ServiceVersionKey.String("v0.1.0"),
-			attribute.String("environment", "demo"),
-		),
+	return resource.NewWithAttributes(
+		semconv.SchemaURL,
+		semconv.ServiceNameKey.String("mysql_span_exporter_test"),
+		semconv.ServiceVersionKey.String("0.0.1"),
+		attribute.String("environment", "dev"),
 	)
-	return r
 }
 
 var traceparentRegex = regexp.MustCompile(`traceparent: ([^\s]+)`)
@@ -162,8 +170,14 @@ func main() {
 		panic(err)
 	}
 
+	grpcexp, err := newGRPCExporter(ctx)
+	if err != nil {
+		panic(err)
+	}
+
 	tp := trace.NewTracerProvider(
 		trace.WithBatcher(exp),
+		trace.WithBatcher(grpcexp),
 		trace.WithResource(newResource()),
 	)
 	defer func() {
@@ -172,6 +186,7 @@ func main() {
 		}
 	}()
 	otel.SetTracerProvider(tp)
+	tracer = tp.Tracer("mysql_exporter_test")
 	/* tracing setup end */
 
 	db, err := sqlx.Connect("mysql", "root:@tcp(127.0.0.1:3306)/performance_schema?parseTime=true")
@@ -219,7 +234,7 @@ func main() {
 				// statementEvent.TimerStart is in picoseconds since the start of the server
 				// fixme or does the timer start after the server? how do i figure out when the timer started???
 				startTime := timeOrigin[0].Started.Add(time.Duration(statementEvent.TimerStart) * time.Nanosecond / 1000)
-				_, span := otel.Tracer("test_tracer").Start(ctx, statementEvent.EventName, oteltrace.WithTimestamp(startTime))
+				_, span := tracer.Start(ctx, statementEvent.EventName, oteltrace.WithTimestamp(startTime))
 				span.SetAttributes(
 					// todo add all attributes from struct
 					attribute.String("sql_text", statementEvent.SqlText.String),

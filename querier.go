@@ -6,7 +6,6 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
 )
 
@@ -16,7 +15,7 @@ type User struct {
 
 func query() {
 	ctx := context.Background()
-	ctx, span := otel.Tracer("test_tracer").Start(ctx, "query")
+	ctx, span := tracer.Start(ctx, "query")
 	defer span.End()
 	span.AddEvent("ima connect now")
 	db, err := sqlx.Connect("mysql", "root:@tcp(localhost:3306)/mysql")

@@ -1,8 +1,8 @@
 {
 	"Name": "query",
 	"SpanContext": {
-		"TraceID": "2de3895f16e05600434c6b8f5b8dce3a",
-		"SpanID": "5e3fe3e744fe5ae4",
+		"TraceID": "33e94e8775c6478cac8a5bdf6c9ea751",
+		"SpanID": "a223edc339c71d7d",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -15,27 +15,27 @@
 		"Remote": false
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T11:01:37.39345-05:00",
-	"EndTime": "2022-11-20T11:01:37.397140012-05:00",
+	"StartTime": "2022-11-20T11:24:31.072304-05:00",
+	"EndTime": "2022-11-20T11:24:31.074574683-05:00",
 	"Attributes": null,
 	"Events": [
 		{
 			"Name": "ima connect now",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T11:01:37.393471-05:00"
+			"Time": "2022-11-20T11:24:31.072312-05:00"
 		},
 		{
 			"Name": "ima do a query now",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T11:01:37.396873-05:00"
+			"Time": "2022-11-20T11:24:31.074269-05:00"
 		},
 		{
 			"Name": "i did it",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T11:01:37.397089-05:00"
+			"Time": "2022-11-20T11:24:31.074543-05:00"
 		}
 	],
 	"Links": null,
@@ -47,9 +47,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -58,7 +80,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "38f5973da8170ea8004ba10c87807f23",
-		"SpanID": "b6f3dfedd0cbf93f",
+		"SpanID": "0fe2c9c3f7f21b61",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -71,8 +93,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:41:34.689789Z",
-	"EndTime": "2022-11-19T23:41:34.689928Z",
+	"StartTime": "2022-11-19T23:41:34.68984Z",
+	"EndTime": "2022-11-19T23:41:34.689979Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -113,9 +135,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -124,7 +168,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "2653ed32ad62005f65f3b0d615b7fbd6",
-		"SpanID": "2facc5d3adbfba55",
+		"SpanID": "e362dd183e361216",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -137,8 +181,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:41:36.340808Z",
-	"EndTime": "2022-11-19T23:41:36.341011Z",
+	"StartTime": "2022-11-19T23:41:36.340859Z",
+	"EndTime": "2022-11-19T23:41:36.341062Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -179,9 +223,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -190,7 +256,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8dfb7af4740e1ca613fb51e52aba6a12",
-		"SpanID": "ae16cb54ffc9d940",
+		"SpanID": "59e106a0af62bc09",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -203,8 +269,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:41:37.540205Z",
-	"EndTime": "2022-11-19T23:41:37.540338Z",
+	"StartTime": "2022-11-19T23:41:37.540256Z",
+	"EndTime": "2022-11-19T23:41:37.540389Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -245,9 +311,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -256,7 +344,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "2acab5be42f7c1d761c1fc89f9fe219c",
-		"SpanID": "3201bd010a677b39",
+		"SpanID": "e9e7e77951e2000a",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -269,8 +357,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:42:11.105952Z",
-	"EndTime": "2022-11-19T23:42:11.106092Z",
+	"StartTime": "2022-11-19T23:42:11.106003Z",
+	"EndTime": "2022-11-19T23:42:11.106143Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -311,9 +399,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -322,7 +432,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b84123c7098f48d1551a1a297795fdc6",
-		"SpanID": "8fc5128c025a3c92",
+		"SpanID": "164a910912a00fed",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -335,8 +445,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:42:13.215858Z",
-	"EndTime": "2022-11-19T23:42:13.215974Z",
+	"StartTime": "2022-11-19T23:42:13.215909Z",
+	"EndTime": "2022-11-19T23:42:13.216025Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -377,9 +487,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -388,7 +520,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "e3b14876427058c8b5450a95ea4343a1",
-		"SpanID": "8c0efff395086e93",
+		"SpanID": "c30bfc2d5b553fe8",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -401,8 +533,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:42:57.388824Z",
-	"EndTime": "2022-11-19T23:42:57.389048Z",
+	"StartTime": "2022-11-19T23:42:57.388875Z",
+	"EndTime": "2022-11-19T23:42:57.389099Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -443,9 +575,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -454,7 +608,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "9fa23e29acc5e7699160e8e2c540e512",
-		"SpanID": "9da2af6300f03678",
+		"SpanID": "4a8a6c04a0c6fc7a",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -467,8 +621,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:43:20.088719Z",
-	"EndTime": "2022-11-19T23:43:20.088832Z",
+	"StartTime": "2022-11-19T23:43:20.08877Z",
+	"EndTime": "2022-11-19T23:43:20.088883Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -509,9 +663,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -520,7 +696,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "25e1bd330f56fc2b7ee54c516ccb2227",
-		"SpanID": "eb9719e23adf97b7",
+		"SpanID": "5e3610e8adeda529",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -533,8 +709,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-19T23:58:45.374175Z",
-	"EndTime": "2022-11-19T23:58:45.374323Z",
+	"StartTime": "2022-11-19T23:58:45.374226Z",
+	"EndTime": "2022-11-19T23:58:45.374374Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -575,9 +751,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -586,7 +784,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "a17724ac13ad3522db3636cd1796fe7d",
-		"SpanID": "977f1a511ef3fe89",
+		"SpanID": "ffbb52c21dc4d159",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -599,8 +797,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:01:54.222791Z",
-	"EndTime": "2022-11-20T00:01:54.222928Z",
+	"StartTime": "2022-11-20T00:01:54.222842Z",
+	"EndTime": "2022-11-20T00:01:54.222979Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -641,9 +839,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -652,7 +872,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "267f24e4f0ca3a7d79e31ce62cda65bf",
-		"SpanID": "8eb27d1287e0e943",
+		"SpanID": "398f57ab755785ea",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -665,8 +885,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:03:49.726482Z",
-	"EndTime": "2022-11-20T00:03:49.726777Z",
+	"StartTime": "2022-11-20T00:03:49.726533Z",
+	"EndTime": "2022-11-20T00:03:49.726828Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -707,9 +927,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -718,7 +960,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "d5fb71bfe5ea30924981e0b8a5160796",
-		"SpanID": "ac9fef7a1613ac64",
+		"SpanID": "814bd5ceac78da24",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -731,8 +973,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:05:29.626577Z",
-	"EndTime": "2022-11-20T00:05:29.626728Z",
+	"StartTime": "2022-11-20T00:05:29.626628Z",
+	"EndTime": "2022-11-20T00:05:29.626779Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -773,9 +1015,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -784,7 +1048,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ffd65a15cb19c73b82ca008a0fe21704",
-		"SpanID": "b11de9c70e375b7d",
+		"SpanID": "ed1184d4edeeea50",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -797,8 +1061,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:06:03.261199Z",
-	"EndTime": "2022-11-20T00:06:03.261382Z",
+	"StartTime": "2022-11-20T00:06:03.26125Z",
+	"EndTime": "2022-11-20T00:06:03.261433Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -839,9 +1103,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -850,7 +1136,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "01523a5ae5245f5239e52873183cfd03",
-		"SpanID": "7ca3b34e0337aa82",
+		"SpanID": "929291141f1efca5",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -863,8 +1149,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:08:54.675638Z",
-	"EndTime": "2022-11-20T00:08:54.675795Z",
+	"StartTime": "2022-11-20T00:08:54.675689Z",
+	"EndTime": "2022-11-20T00:08:54.675846Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -905,9 +1191,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -916,7 +1224,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "6b8dcccb8299bb3eb33370eb8d881a4a",
-		"SpanID": "c6a903ce19b16956",
+		"SpanID": "61aaa7a3526e3787",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -929,8 +1237,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:10:07.209203Z",
-	"EndTime": "2022-11-20T00:10:07.209385Z",
+	"StartTime": "2022-11-20T00:10:07.209254Z",
+	"EndTime": "2022-11-20T00:10:07.209436Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -971,9 +1279,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -982,7 +1312,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "6f73f90b113897eebacfc156724efc34",
-		"SpanID": "a10fb628aab07cd4",
+		"SpanID": "cd4fb5307154e77d",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -995,8 +1325,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:12:10.533799Z",
-	"EndTime": "2022-11-20T00:12:10.53395Z",
+	"StartTime": "2022-11-20T00:12:10.53385Z",
+	"EndTime": "2022-11-20T00:12:10.534001Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1037,9 +1367,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1048,7 +1400,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ba927715995e74f79f5fd3461cdaf6fd",
-		"SpanID": "74af0a05f7afe73e",
+		"SpanID": "11a603484d54abd9",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1061,8 +1413,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:48:14.368798Z",
-	"EndTime": "2022-11-20T09:48:14.369319Z",
+	"StartTime": "2022-11-20T09:48:14.368849Z",
+	"EndTime": "2022-11-20T09:48:14.36937Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1103,9 +1455,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1114,7 +1488,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8e8573c72f480589e9061df68b9c4b0e",
-		"SpanID": "6f5fa6907d24f50b",
+		"SpanID": "06abc5fa6940d7d4",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1127,8 +1501,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:48:31.773133Z",
-	"EndTime": "2022-11-20T09:48:31.773305Z",
+	"StartTime": "2022-11-20T09:48:31.773184Z",
+	"EndTime": "2022-11-20T09:48:31.773356Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1169,9 +1543,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1180,7 +1576,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "3e9cc0f9c67fc6d8b8f8523b614cdb1f",
-		"SpanID": "42fb2e02017f9e31",
+		"SpanID": "18c17f34427941fe",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1193,8 +1589,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:50:45.233766Z",
-	"EndTime": "2022-11-20T09:50:45.234125Z",
+	"StartTime": "2022-11-20T09:50:45.233817Z",
+	"EndTime": "2022-11-20T09:50:45.234176Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1235,9 +1631,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1246,7 +1664,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "5a135666a3717723c56c60c752938a7e",
-		"SpanID": "abe4d6ed635bc9e8",
+		"SpanID": "326c81909410d225",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1259,8 +1677,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:50:54.658213Z",
-	"EndTime": "2022-11-20T09:50:54.658401Z",
+	"StartTime": "2022-11-20T09:50:54.658264Z",
+	"EndTime": "2022-11-20T09:50:54.658452Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1301,9 +1719,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1312,7 +1752,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ce5ab9f20fa241025db7c2243b23221d",
-		"SpanID": "41d65acdcd0d2edc",
+		"SpanID": "f8869c47922466b3",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1325,8 +1765,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T09:51:00.67455Z",
-	"EndTime": "2022-11-20T09:51:00.674727Z",
+	"StartTime": "2022-11-20T09:51:00.674601Z",
+	"EndTime": "2022-11-20T09:51:00.674778Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1367,9 +1807,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1378,7 +1840,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "d065ce5a36a784400d6bef4e1ebbc63b",
-		"SpanID": "9ada83a1626d14b3",
+		"SpanID": "0ab0541cc1ada5f7",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1391,8 +1853,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:19:58.782813Z",
-	"EndTime": "2022-11-20T10:19:58.783126Z",
+	"StartTime": "2022-11-20T10:19:58.782864Z",
+	"EndTime": "2022-11-20T10:19:58.783177Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1433,9 +1895,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1444,7 +1928,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b8e9d60ee71bb88b8046299a1574ac20",
-		"SpanID": "95a611585c47c515",
+		"SpanID": "2e0b5267018f2472",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1457,8 +1941,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:20:44.223493Z",
-	"EndTime": "2022-11-20T10:20:44.223652Z",
+	"StartTime": "2022-11-20T10:20:44.223544Z",
+	"EndTime": "2022-11-20T10:20:44.223703Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1499,9 +1983,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1510,7 +2016,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "1a6b3fa0e9138aee3fde4dfff2f4d497",
-		"SpanID": "4a88ad5bc787d59c",
+		"SpanID": "50b65a958679f3fe",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1523,8 +2029,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:21:03.885486Z",
-	"EndTime": "2022-11-20T10:21:03.885827Z",
+	"StartTime": "2022-11-20T10:21:03.885537Z",
+	"EndTime": "2022-11-20T10:21:03.885878Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1565,9 +2071,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1576,7 +2104,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8427810834c2f0cc1ab1a09afd30de8c",
-		"SpanID": "1158bc9b597f4d93",
+		"SpanID": "606affbbe0fa06d8",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1589,8 +2117,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:25:27.459239Z",
-	"EndTime": "2022-11-20T10:25:27.459381Z",
+	"StartTime": "2022-11-20T10:25:27.45929Z",
+	"EndTime": "2022-11-20T10:25:27.459432Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1631,9 +2159,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1642,7 +2192,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b5c7e6c70d3c4158bcd64c76e99002bc",
-		"SpanID": "64f9f635c3f56e02",
+		"SpanID": "cc16f18ebe6245fd",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1655,8 +2205,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:27:30.906342Z",
-	"EndTime": "2022-11-20T10:27:30.90649Z",
+	"StartTime": "2022-11-20T10:27:30.906393Z",
+	"EndTime": "2022-11-20T10:27:30.906541Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1697,9 +2247,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1708,7 +2280,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "e3751534efa0fe8a8e9401b39fab994c",
-		"SpanID": "f6b8d7aa994b6ad0",
+		"SpanID": "714d1123ced76298",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1721,8 +2293,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:28:07.489921Z",
-	"EndTime": "2022-11-20T10:28:07.490035Z",
+	"StartTime": "2022-11-20T10:28:07.489972Z",
+	"EndTime": "2022-11-20T10:28:07.490086Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1763,9 +2335,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1774,7 +2368,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8c7ab6a69b7533ad4da483f4788eb95b",
-		"SpanID": "b570cce092af6a83",
+		"SpanID": "5900fe704dee4ca9",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1787,8 +2381,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:28:53.520683Z",
-	"EndTime": "2022-11-20T10:28:53.520818Z",
+	"StartTime": "2022-11-20T10:28:53.520734Z",
+	"EndTime": "2022-11-20T10:28:53.520869Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1829,9 +2423,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1840,7 +2456,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "7b5e60057f2a69d1e0ad928881f8e1f0",
-		"SpanID": "b9f69cf6058ba2aa",
+		"SpanID": "11b47b5c129c54fc",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1853,8 +2469,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:29:26.204937Z",
-	"EndTime": "2022-11-20T10:29:26.205053Z",
+	"StartTime": "2022-11-20T10:29:26.204988Z",
+	"EndTime": "2022-11-20T10:29:26.205104Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1895,9 +2511,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1906,7 +2544,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "0ef45ae31de19641cb3660f4babd36cb",
-		"SpanID": "9b66ba6f59f6f9e7",
+		"SpanID": "b8695edd98b4b36f",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1919,8 +2557,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:30:57.939443Z",
-	"EndTime": "2022-11-20T10:30:57.939599Z",
+	"StartTime": "2022-11-20T10:30:57.939494Z",
+	"EndTime": "2022-11-20T10:30:57.93965Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -1961,9 +2599,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -1972,7 +2632,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "d3e833fadc15d58678c31aa673bd4217",
-		"SpanID": "0152b728c30e34f1",
+		"SpanID": "7fecaabcf1a26bc8",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -1985,8 +2645,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:31:04.11016Z",
-	"EndTime": "2022-11-20T10:31:04.110396Z",
+	"StartTime": "2022-11-20T10:31:04.110211Z",
+	"EndTime": "2022-11-20T10:31:04.110447Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2027,9 +2687,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2038,7 +2720,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "58333f144be36295558c8a86d0ffc81f",
-		"SpanID": "91a20fa872f414c7",
+		"SpanID": "3de829e1644f5a53",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2051,8 +2733,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:31:40.546017Z",
-	"EndTime": "2022-11-20T10:31:40.546133Z",
+	"StartTime": "2022-11-20T10:31:40.546068Z",
+	"EndTime": "2022-11-20T10:31:40.546184Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2093,9 +2775,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2104,7 +2808,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b69b553e96680aba57967b4758089d98",
-		"SpanID": "3fc800076ff1e28c",
+		"SpanID": "6a8611e7d6081cca",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2117,8 +2821,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:31:58.770478Z",
-	"EndTime": "2022-11-20T10:31:58.770631Z",
+	"StartTime": "2022-11-20T10:31:58.770529Z",
+	"EndTime": "2022-11-20T10:31:58.770682Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2159,9 +2863,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2170,7 +2896,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "7cfcafa5547b76466a95586e24fdf338",
-		"SpanID": "c6877641ae17e28a",
+		"SpanID": "e8b04e520b68377d",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2183,8 +2909,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:32:07.201963Z",
-	"EndTime": "2022-11-20T10:32:07.202105Z",
+	"StartTime": "2022-11-20T10:32:07.202014Z",
+	"EndTime": "2022-11-20T10:32:07.202156Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2225,9 +2951,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2236,7 +2984,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b60013106f15424331b745f96b36c39d",
-		"SpanID": "0b4213ad3d965dcb",
+		"SpanID": "d81a0e9bff207734",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2249,8 +2997,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:34:09.848377Z",
-	"EndTime": "2022-11-20T10:34:09.84852Z",
+	"StartTime": "2022-11-20T10:34:09.848428Z",
+	"EndTime": "2022-11-20T10:34:09.848571Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2291,9 +3039,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2302,7 +3072,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "e3c473b7d2ba277183be0f1da4a1c6b7",
-		"SpanID": "d712e9c1af874a0d",
+		"SpanID": "80c3a8e3b2808f4f",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2315,8 +3085,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:34:15.948206Z",
-	"EndTime": "2022-11-20T10:34:15.94832Z",
+	"StartTime": "2022-11-20T10:34:15.948257Z",
+	"EndTime": "2022-11-20T10:34:15.948371Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2357,9 +3127,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2368,7 +3160,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "44791f14e5f03e9bdcb65678b1c7f43f",
-		"SpanID": "a090420c82f36b35",
+		"SpanID": "c107072190838eea",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2381,8 +3173,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:34:28.755265Z",
-	"EndTime": "2022-11-20T10:34:28.755382Z",
+	"StartTime": "2022-11-20T10:34:28.755316Z",
+	"EndTime": "2022-11-20T10:34:28.755433Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2423,9 +3215,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2434,7 +3248,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "19924add6ad538abb7279b66d9b4e749",
-		"SpanID": "b0d50bf95b1e8a94",
+		"SpanID": "885db470b146bd87",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2447,8 +3261,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:35:52.060777Z",
-	"EndTime": "2022-11-20T10:35:52.060918Z",
+	"StartTime": "2022-11-20T10:35:52.060828Z",
+	"EndTime": "2022-11-20T10:35:52.060969Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2489,9 +3303,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2500,7 +3336,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "a9b65fcae5b1100e416418699fcac33c",
-		"SpanID": "8fa287efb773f51d",
+		"SpanID": "f5e7cacf63a32731",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2513,8 +3349,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:36:09.955604Z",
-	"EndTime": "2022-11-20T10:36:09.955717Z",
+	"StartTime": "2022-11-20T10:36:09.955655Z",
+	"EndTime": "2022-11-20T10:36:09.955768Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2555,9 +3391,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2566,7 +3424,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "392246294e3af1f19a8e2a82ac87e8b7",
-		"SpanID": "1eac020fa74a8f49",
+		"SpanID": "343f6da6d419288e",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2579,8 +3437,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:36:41.597303Z",
-	"EndTime": "2022-11-20T10:36:41.597418Z",
+	"StartTime": "2022-11-20T10:36:41.597354Z",
+	"EndTime": "2022-11-20T10:36:41.597469Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2621,9 +3479,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2632,7 +3512,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "bedbbc4d9f3896d74299ba26b27aa17b",
-		"SpanID": "09ad144e914b3d85",
+		"SpanID": "7ebbd0482909d9f5",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2645,8 +3525,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:36:54.618018Z",
-	"EndTime": "2022-11-20T10:36:54.618167Z",
+	"StartTime": "2022-11-20T10:36:54.618069Z",
+	"EndTime": "2022-11-20T10:36:54.618218Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2687,9 +3567,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2698,7 +3600,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "be3e761bb50e88d5d3ab600cbaea63c3",
-		"SpanID": "5d0641cf4d8f83e2",
+		"SpanID": "13dd4d81e7aed246",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2711,8 +3613,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:37:09.574269Z",
-	"EndTime": "2022-11-20T10:37:09.574401Z",
+	"StartTime": "2022-11-20T10:37:09.57432Z",
+	"EndTime": "2022-11-20T10:37:09.574452Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2753,9 +3655,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2764,7 +3688,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "55437d1615bb9ca4ed041aee628e9ac0",
-		"SpanID": "f5436d7667e8ba9d",
+		"SpanID": "404840cce1a50326",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2777,8 +3701,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:37:27.873464Z",
-	"EndTime": "2022-11-20T10:37:27.873578Z",
+	"StartTime": "2022-11-20T10:37:27.873515Z",
+	"EndTime": "2022-11-20T10:37:27.873629Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2819,9 +3743,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2830,7 +3776,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b1c660cacbe9301188380c8be964c804",
-		"SpanID": "bf4264b6896ade9d",
+		"SpanID": "f5898424c3d6b623",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2843,8 +3789,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:37:40.693406Z",
-	"EndTime": "2022-11-20T10:37:40.693523Z",
+	"StartTime": "2022-11-20T10:37:40.693457Z",
+	"EndTime": "2022-11-20T10:37:40.693574Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2885,9 +3831,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2896,7 +3864,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "99b95346b426bad2823a596a6f91af1e",
-		"SpanID": "d7e46b080ce1eea8",
+		"SpanID": "6ae7812155b7772d",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2909,8 +3877,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:38:03.977401Z",
-	"EndTime": "2022-11-20T10:38:03.977525Z",
+	"StartTime": "2022-11-20T10:38:03.977452Z",
+	"EndTime": "2022-11-20T10:38:03.977576Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -2951,9 +3919,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -2962,7 +3952,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "fcdac00adc604d46661c4e0420a3eced",
-		"SpanID": "6954119f70373754",
+		"SpanID": "3e3db21537bd35b9",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -2975,8 +3965,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:38:18.416872Z",
-	"EndTime": "2022-11-20T10:38:18.417017Z",
+	"StartTime": "2022-11-20T10:38:18.416923Z",
+	"EndTime": "2022-11-20T10:38:18.417068Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3017,9 +4007,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3028,7 +4040,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "a6094d1b2bf681767354973df253abd1",
-		"SpanID": "da9840fe036a22e8",
+		"SpanID": "01bd44dc6c06c1dc",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3041,8 +4053,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:49:14.526464Z",
-	"EndTime": "2022-11-20T10:49:14.526637Z",
+	"StartTime": "2022-11-20T10:49:14.526515Z",
+	"EndTime": "2022-11-20T10:49:14.526688Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3083,9 +4095,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3094,7 +4128,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "059e755285008cc3149d163624628502",
-		"SpanID": "48804e454f4398c3",
+		"SpanID": "393ca67aaf1b6f4a",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3107,8 +4141,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:55:00.483959Z",
-	"EndTime": "2022-11-20T10:55:00.484108Z",
+	"StartTime": "2022-11-20T10:55:00.48401Z",
+	"EndTime": "2022-11-20T10:55:00.484159Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3149,9 +4183,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3160,7 +4216,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "95012ec12d41bb4c011defb43d74f6be",
-		"SpanID": "72beaec66b382749",
+		"SpanID": "f7e92bf16f8d4096",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3173,8 +4229,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:55:07.5931Z",
-	"EndTime": "2022-11-20T10:55:07.593215Z",
+	"StartTime": "2022-11-20T10:55:07.593151Z",
+	"EndTime": "2022-11-20T10:55:07.593266Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3215,9 +4271,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3226,7 +4304,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "681a214b709510b393a56bd88c6a57a9",
-		"SpanID": "9e1e38cb9ddf63e4",
+		"SpanID": "eca2f8cb1e2bee1f",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3239,8 +4317,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:57:24.349517Z",
-	"EndTime": "2022-11-20T10:57:24.349659Z",
+	"StartTime": "2022-11-20T10:57:24.349568Z",
+	"EndTime": "2022-11-20T10:57:24.34971Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3281,9 +4359,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3292,7 +4392,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ed270dfb28db7cf8009490fb115148c0",
-		"SpanID": "7fdf74dd9dabb00a",
+		"SpanID": "d04da6a144738f75",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3305,8 +4405,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:57:29.325Z",
-	"EndTime": "2022-11-20T10:57:29.325147Z",
+	"StartTime": "2022-11-20T10:57:29.325051Z",
+	"EndTime": "2022-11-20T10:57:29.325198Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3347,9 +4447,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3358,7 +4480,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "cc233b758d8a24a1101139d7c91fc5b6",
-		"SpanID": "539732cf3b025d28",
+		"SpanID": "e887e2f98a5ecedb",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3371,8 +4493,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T10:59:03.360348Z",
-	"EndTime": "2022-11-20T10:59:03.36049Z",
+	"StartTime": "2022-11-20T10:59:03.360399Z",
+	"EndTime": "2022-11-20T10:59:03.360541Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3413,9 +4535,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3424,7 +4568,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "0ed7958df6ef9681e04a379120262555",
-		"SpanID": "6a9c3680ab8cd64f",
+		"SpanID": "3b1b88c8fdcb61b1",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3437,8 +4581,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T11:01:08.660988Z",
-	"EndTime": "2022-11-20T11:01:08.661106Z",
+	"StartTime": "2022-11-20T11:01:08.661039Z",
+	"EndTime": "2022-11-20T11:01:08.661157Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3479,9 +4623,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3490,7 +4656,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8f62b34a2a8bfa6cfa301c65451e7832",
-		"SpanID": "f6532597ceb09b96",
+		"SpanID": "a3e47887f35b584b",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3503,8 +4669,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T11:01:19.374832Z",
-	"EndTime": "2022-11-20T11:01:19.374975Z",
+	"StartTime": "2022-11-20T11:01:19.374883Z",
+	"EndTime": "2022-11-20T11:01:19.375026Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3545,9 +4711,31 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
@@ -3556,7 +4744,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "2de3895f16e05600434c6b8f5b8dce3a",
-		"SpanID": "ed7f5d42f1ea8d68",
+		"SpanID": "af98f799c5eea39c",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -3569,8 +4757,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T11:01:37.396722Z",
-	"EndTime": "2022-11-20T11:01:37.396855Z",
+	"StartTime": "2022-11-20T11:01:37.396773Z",
+	"EndTime": "2022-11-20T11:01:37.396906Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -3611,9 +4799,1351 @@
 	"DroppedEvents": 0,
 	"DroppedLinks": 0,
 	"ChildSpanCount": 0,
-	"Resource": null,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
 	"InstrumentationLibrary": {
-		"Name": "test_tracer",
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "6b9e75c2cb595e6bfab947e6d550ba05",
+		"SpanID": "a848983414a187e0",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "6b9e75c2cb595e6bfab947e6d550ba05",
+		"SpanID": "054ed01499d7cdb3",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:10:25.649415Z",
+	"EndTime": "2022-11-20T11:10:25.649546Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-6b9e75c2cb595e6bfab947e6d550ba05-054ed01499d7cdb3-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "c6385971f33ae31c6014a33b06b9f2ca",
+		"SpanID": "edbfc1ee4c863c0b",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "c6385971f33ae31c6014a33b06b9f2ca",
+		"SpanID": "be0c6f28e7659e02",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:10:46.848291Z",
+	"EndTime": "2022-11-20T11:10:46.848441Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-c6385971f33ae31c6014a33b06b9f2ca-be0c6f28e7659e02-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "77c86fa9a577fa0c35c92a39618a219b",
+		"SpanID": "9a5f9428bdf8c37f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "77c86fa9a577fa0c35c92a39618a219b",
+		"SpanID": "f6ce13cd7e2cb306",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:11:44.708806Z",
+	"EndTime": "2022-11-20T11:11:44.708935Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-77c86fa9a577fa0c35c92a39618a219b-f6ce13cd7e2cb306-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "5121ecf8228cbb1692fdb266242e7c6f",
+		"SpanID": "337f2811c1da37b9",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "5121ecf8228cbb1692fdb266242e7c6f",
+		"SpanID": "bd95c3f5e7fad6fe",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:12:25.35081Z",
+	"EndTime": "2022-11-20T11:12:25.350926Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-5121ecf8228cbb1692fdb266242e7c6f-bd95c3f5e7fad6fe-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "3576c9a93b554358b170b7e38e35a67c",
+		"SpanID": "c189acde8e71f6de",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "3576c9a93b554358b170b7e38e35a67c",
+		"SpanID": "3a75032390ec1da0",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:14:43.457281Z",
+	"EndTime": "2022-11-20T11:14:43.457412Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-3576c9a93b554358b170b7e38e35a67c-3a75032390ec1da0-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "1e02e741bc7453c72ae48cc79d53a40a",
+		"SpanID": "a48208de34b81b70",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "1e02e741bc7453c72ae48cc79d53a40a",
+		"SpanID": "2ed07aaa3a8f0f9d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:16:26.656579Z",
+	"EndTime": "2022-11-20T11:16:26.656715Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-1e02e741bc7453c72ae48cc79d53a40a-2ed07aaa3a8f0f9d-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "ea9ff1b3522ecf222c96128f8a06905e",
+		"SpanID": "078ed7cb5d10c4e5",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "ea9ff1b3522ecf222c96128f8a06905e",
+		"SpanID": "09056e237305b750",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:17:54.423491Z",
+	"EndTime": "2022-11-20T11:17:54.423611Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-ea9ff1b3522ecf222c96128f8a06905e-09056e237305b750-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "7521e05c05bcacd3519aafbbf830dd0c",
+		"SpanID": "a60681ef14e998a8",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "7521e05c05bcacd3519aafbbf830dd0c",
+		"SpanID": "5d1c53f8cfcb3898",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:18:06.950275Z",
+	"EndTime": "2022-11-20T11:18:06.950435Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-7521e05c05bcacd3519aafbbf830dd0c-5d1c53f8cfcb3898-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "6f6c16f694cfeff7ba1acea7d76439a9",
+		"SpanID": "9bba7843a3eff8fe",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "6f6c16f694cfeff7ba1acea7d76439a9",
+		"SpanID": "b27e6dcb035bc657",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:20:30.712177Z",
+	"EndTime": "2022-11-20T11:20:30.712329Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-6f6c16f694cfeff7ba1acea7d76439a9-b27e6dcb035bc657-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "640ccfdf8ebfc21c480292aa1ec63552",
+		"SpanID": "6c87040adc7aec13",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "640ccfdf8ebfc21c480292aa1ec63552",
+		"SpanID": "f7050a9ab24ff920",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:21:03.250359Z",
+	"EndTime": "2022-11-20T11:21:03.250485Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-640ccfdf8ebfc21c480292aa1ec63552-f7050a9ab24ff920-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "f21f2cfa5263a3e2a06e8caa51df3f1c",
+		"SpanID": "56a75a10bf16b109",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "f21f2cfa5263a3e2a06e8caa51df3f1c",
+		"SpanID": "7b16a9c6012e4a24",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:21:15.385724Z",
+	"EndTime": "2022-11-20T11:21:15.385914Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-f21f2cfa5263a3e2a06e8caa51df3f1c-7b16a9c6012e4a24-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "025d528f31c83b3705aa7d05582e4489",
+		"SpanID": "be3c431799a88fd4",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "025d528f31c83b3705aa7d05582e4489",
+		"SpanID": "f38e00cefe2de4e3",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:21:38.916079Z",
+	"EndTime": "2022-11-20T11:21:38.916196Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-025d528f31c83b3705aa7d05582e4489-f38e00cefe2de4e3-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "c94ed5d4a8e51da988424797b6e9d098",
+		"SpanID": "11c4af5b842d92e7",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "c94ed5d4a8e51da988424797b6e9d098",
+		"SpanID": "5beafb82b46d4e71",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:21:44.236207Z",
+	"EndTime": "2022-11-20T11:21:44.236338Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-c94ed5d4a8e51da988424797b6e9d098-5beafb82b46d4e71-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "f82a961e194db14a43b98db3451d9ef6",
+		"SpanID": "b908022bbae16a3f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "f82a961e194db14a43b98db3451d9ef6",
+		"SpanID": "1744f3e1ca7ec34c",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:22:35.731628Z",
+	"EndTime": "2022-11-20T11:22:35.731745Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-f82a961e194db14a43b98db3451d9ef6-1744f3e1ca7ec34c-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "33e94e8775c6478cac8a5bdf6c9ea751",
+		"SpanID": "c19418d054ae5cd9",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "33e94e8775c6478cac8a5bdf6c9ea751",
+		"SpanID": "a223edc339c71d7d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T11:24:31.074222Z",
+	"EndTime": "2022-11-20T11:24:31.074352Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-33e94e8775c6478cac8a5bdf6c9ea751-a223edc339c71d7d-01 */"
+			}
+		},
+		{
+			"Key": "rows_sent",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_examined",
+			"Value": {
+				"Type": "INT64",
+				"Value": 4
+			}
+		},
+		{
+			"Key": "rows_affected",
+			"Value": {
+				"Type": "INT64",
+				"Value": 0
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": [
+		{
+			"Key": "environment",
+			"Value": {
+				"Type": "STRING",
+				"Value": "dev"
+			}
+		},
+		{
+			"Key": "service.name",
+			"Value": {
+				"Type": "STRING",
+				"Value": "mysql_span_exporter_test"
+			}
+		},
+		{
+			"Key": "service.version",
+			"Value": {
+				"Type": "STRING",
+				"Value": "0.0.1"
+			}
+		}
+	],
+	"InstrumentationLibrary": {
+		"Name": "mysql_exporter_test",
 		"Version": "",
 		"SchemaURL": ""
 	}
