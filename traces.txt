@@ -1,8 +1,8 @@
 {
 	"Name": "query",
 	"SpanContext": {
-		"TraceID": "6f73f90b113897eebacfc156724efc34",
-		"SpanID": "284f4cded4a01595",
+		"TraceID": "ce5ab9f20fa241025db7c2243b23221d",
+		"SpanID": "9d93b260f65d7b11",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -15,27 +15,27 @@
 		"Remote": false
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T00:12:10.531575-05:00",
-	"EndTime": "2022-11-20T00:12:10.534220126-05:00",
+	"StartTime": "2022-11-20T09:51:00.671649-05:00",
+	"EndTime": "2022-11-20T09:51:00.675041042-05:00",
 	"Attributes": null,
 	"Events": [
 		{
 			"Name": "ima connect now",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T00:12:10.531599-05:00"
+			"Time": "2022-11-20T09:51:00.671667-05:00"
 		},
 		{
 			"Name": "ima do a query now",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T00:12:10.533935-05:00"
+			"Time": "2022-11-20T09:51:00.674704-05:00"
 		},
 		{
 			"Name": "i did it",
 			"Attributes": null,
 			"DroppedAttributeCount": 0,
-			"Time": "2022-11-20T00:12:10.534195-05:00"
+			"Time": "2022-11-20T09:51:00.675023-05:00"
 		}
 	],
 	"Links": null,
@@ -58,7 +58,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "38f5973da8170ea8004ba10c87807f23",
-		"SpanID": "3c323a3fb90707c5",
+		"SpanID": "1a909474627e8336",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -71,8 +71,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:30:41.143819Z",
-	"EndTime": "2022-11-20T12:30:41.143958Z",
+	"StartTime": "2022-11-19T23:41:34.688828Z",
+	"EndTime": "2022-11-19T23:41:34.688967Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -103,7 +103,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "2653ed32ad62005f65f3b0d615b7fbd6",
-		"SpanID": "e987824ad115a589",
+		"SpanID": "417f90975690b6af",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -116,8 +116,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:30:42.794838Z",
-	"EndTime": "2022-11-20T12:30:42.795041Z",
+	"StartTime": "2022-11-19T23:41:36.339847Z",
+	"EndTime": "2022-11-19T23:41:36.34005Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -148,7 +148,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "8dfb7af4740e1ca613fb51e52aba6a12",
-		"SpanID": "799a0ac1497c8843",
+		"SpanID": "eacacf9e634fc602",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -161,8 +161,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:30:43.994235Z",
-	"EndTime": "2022-11-20T12:30:43.994368Z",
+	"StartTime": "2022-11-19T23:41:37.539244Z",
+	"EndTime": "2022-11-19T23:41:37.539377Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -193,7 +193,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "2acab5be42f7c1d761c1fc89f9fe219c",
-		"SpanID": "03b65b466b890b66",
+		"SpanID": "4f88c798ae032358",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -206,8 +206,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:31:17.559982Z",
-	"EndTime": "2022-11-20T12:31:17.560122Z",
+	"StartTime": "2022-11-19T23:42:11.104991Z",
+	"EndTime": "2022-11-19T23:42:11.105131Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -238,7 +238,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "b84123c7098f48d1551a1a297795fdc6",
-		"SpanID": "358f4088df6b2d3e",
+		"SpanID": "c4db046694f60e13",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -251,8 +251,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:31:19.669888Z",
-	"EndTime": "2022-11-20T12:31:19.670004Z",
+	"StartTime": "2022-11-19T23:42:13.214897Z",
+	"EndTime": "2022-11-19T23:42:13.215013Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -283,7 +283,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "e3b14876427058c8b5450a95ea4343a1",
-		"SpanID": "993c32a8516b5e5b",
+		"SpanID": "7f1a88a69d05d145",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -296,8 +296,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:32:03.842854Z",
-	"EndTime": "2022-11-20T12:32:03.843078Z",
+	"StartTime": "2022-11-19T23:42:57.387863Z",
+	"EndTime": "2022-11-19T23:42:57.388087Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -328,7 +328,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "9fa23e29acc5e7699160e8e2c540e512",
-		"SpanID": "c4f9082e49c3185d",
+		"SpanID": "028836815a840eda",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -341,8 +341,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:32:26.542749Z",
-	"EndTime": "2022-11-20T12:32:26.542862Z",
+	"StartTime": "2022-11-19T23:43:20.087758Z",
+	"EndTime": "2022-11-19T23:43:20.087871Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -373,7 +373,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "25e1bd330f56fc2b7ee54c516ccb2227",
-		"SpanID": "699a049b2de86b95",
+		"SpanID": "b24cbdf5d8fdca3c",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -386,8 +386,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:47:51.828205Z",
-	"EndTime": "2022-11-20T12:47:51.828353Z",
+	"StartTime": "2022-11-19T23:58:45.373214Z",
+	"EndTime": "2022-11-19T23:58:45.373362Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -418,7 +418,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "a17724ac13ad3522db3636cd1796fe7d",
-		"SpanID": "09a2defce5db5e05",
+		"SpanID": "08a617b370d8f37a",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -431,8 +431,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:51:00.676821Z",
-	"EndTime": "2022-11-20T12:51:00.676958Z",
+	"StartTime": "2022-11-20T00:01:54.22183Z",
+	"EndTime": "2022-11-20T00:01:54.221967Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -463,7 +463,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "267f24e4f0ca3a7d79e31ce62cda65bf",
-		"SpanID": "6a22bf207dc8233d",
+		"SpanID": "e19282b7ad9543f9",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -476,8 +476,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:52:56.180512Z",
-	"EndTime": "2022-11-20T12:52:56.180807Z",
+	"StartTime": "2022-11-20T00:03:49.725521Z",
+	"EndTime": "2022-11-20T00:03:49.725816Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -508,7 +508,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "d5fb71bfe5ea30924981e0b8a5160796",
-		"SpanID": "34494eb1d33df087",
+		"SpanID": "e108d4892aa036a4",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -521,8 +521,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:54:36.080607Z",
-	"EndTime": "2022-11-20T12:54:36.080758Z",
+	"StartTime": "2022-11-20T00:05:29.625616Z",
+	"EndTime": "2022-11-20T00:05:29.625767Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -553,7 +553,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "ffd65a15cb19c73b82ca008a0fe21704",
-		"SpanID": "90dfb393ecaa92c1",
+		"SpanID": "dcf9d621b0616576",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -566,8 +566,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:55:09.715229Z",
-	"EndTime": "2022-11-20T12:55:09.715412Z",
+	"StartTime": "2022-11-20T00:06:03.260238Z",
+	"EndTime": "2022-11-20T00:06:03.260421Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -598,7 +598,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "01523a5ae5245f5239e52873183cfd03",
-		"SpanID": "edcb061426bb0292",
+		"SpanID": "3dd8777c48187584",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -611,8 +611,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:58:01.129668Z",
-	"EndTime": "2022-11-20T12:58:01.129825Z",
+	"StartTime": "2022-11-20T00:08:54.674677Z",
+	"EndTime": "2022-11-20T00:08:54.674834Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -643,7 +643,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "6b8dcccb8299bb3eb33370eb8d881a4a",
-		"SpanID": "663cc6195a73597f",
+		"SpanID": "e1c6660265382613",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -656,8 +656,8 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T12:59:13.663233Z",
-	"EndTime": "2022-11-20T12:59:13.663415Z",
+	"StartTime": "2022-11-20T00:10:07.208242Z",
+	"EndTime": "2022-11-20T00:10:07.208424Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
@@ -688,7 +688,7 @@
 	"Name": "statement/sql/select",
 	"SpanContext": {
 		"TraceID": "6f73f90b113897eebacfc156724efc34",
-		"SpanID": "6237674459a3ffd7",
+		"SpanID": "bc6cd87e81c9ff5b",
 		"TraceFlags": "01",
 		"TraceState": "",
 		"Remote": false
@@ -701,14 +701,239 @@
 		"Remote": true
 	},
 	"SpanKind": 1,
-	"StartTime": "2022-11-20T13:01:16.987829Z",
-	"EndTime": "2022-11-20T13:01:16.98798Z",
+	"StartTime": "2022-11-20T00:12:10.532838Z",
+	"EndTime": "2022-11-20T00:12:10.532989Z",
 	"Attributes": [
 		{
 			"Key": "sql_text",
 			"Value": {
 				"Type": "STRING",
 				"Value": "SELECT User FROM user /* traceparent: 00-6f73f90b113897eebacfc156724efc34-284f4cded4a01595-01 */"
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "ba927715995e74f79f5fd3461cdaf6fd",
+		"SpanID": "533aa1157254275f",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "ba927715995e74f79f5fd3461cdaf6fd",
+		"SpanID": "a5393bdbddfe6453",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T09:48:14.367837Z",
+	"EndTime": "2022-11-20T09:48:14.368358Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-ba927715995e74f79f5fd3461cdaf6fd-a5393bdbddfe6453-01 */"
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "8e8573c72f480589e9061df68b9c4b0e",
+		"SpanID": "8da4ca37f8a9b3ee",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "8e8573c72f480589e9061df68b9c4b0e",
+		"SpanID": "62d7690f7ecea18d",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T09:48:31.772172Z",
+	"EndTime": "2022-11-20T09:48:31.772344Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-8e8573c72f480589e9061df68b9c4b0e-62d7690f7ecea18d-01 */"
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "3e9cc0f9c67fc6d8b8f8523b614cdb1f",
+		"SpanID": "3d1e5b3de57f0d20",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "3e9cc0f9c67fc6d8b8f8523b614cdb1f",
+		"SpanID": "30b8260cc8aed5ff",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T09:50:45.232805Z",
+	"EndTime": "2022-11-20T09:50:45.233164Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-3e9cc0f9c67fc6d8b8f8523b614cdb1f-30b8260cc8aed5ff-01 */"
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "5a135666a3717723c56c60c752938a7e",
+		"SpanID": "42d5f9d5757361a6",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "5a135666a3717723c56c60c752938a7e",
+		"SpanID": "199505cf25a89fbb",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T09:50:54.657252Z",
+	"EndTime": "2022-11-20T09:50:54.65744Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-5a135666a3717723c56c60c752938a7e-199505cf25a89fbb-01 */"
+			}
+		}
+	],
+	"Events": null,
+	"Links": null,
+	"Status": {
+		"Code": "Unset",
+		"Description": ""
+	},
+	"DroppedAttributes": 0,
+	"DroppedEvents": 0,
+	"DroppedLinks": 0,
+	"ChildSpanCount": 0,
+	"Resource": null,
+	"InstrumentationLibrary": {
+		"Name": "test_tracer",
+		"Version": "",
+		"SchemaURL": ""
+	}
+}
+{
+	"Name": "statement/sql/select",
+	"SpanContext": {
+		"TraceID": "ce5ab9f20fa241025db7c2243b23221d",
+		"SpanID": "ad0787a195632942",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": false
+	},
+	"Parent": {
+		"TraceID": "ce5ab9f20fa241025db7c2243b23221d",
+		"SpanID": "9d93b260f65d7b11",
+		"TraceFlags": "01",
+		"TraceState": "",
+		"Remote": true
+	},
+	"SpanKind": 1,
+	"StartTime": "2022-11-20T09:51:00.673589Z",
+	"EndTime": "2022-11-20T09:51:00.673766Z",
+	"Attributes": [
+		{
+			"Key": "sql_text",
+			"Value": {
+				"Type": "STRING",
+				"Value": "SELECT User FROM user /* traceparent: 00-ce5ab9f20fa241025db7c2243b23221d-9d93b260f65d7b11-01 */"
 			}
 		}
 	],

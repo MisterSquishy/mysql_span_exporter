@@ -102,7 +102,13 @@ func main() {
 	defer db.Close()
 
 	timeOrigin := []TimeOrigin{}
-	err = db.SelectContext(ctx, &timeOrigin, "SELECT NOW() - INTERVAL variable_value MICROSECOND STARTED FROM performance_schema.global_status WHERE variable_name='Uptime'")
+	err = db.SelectContext(
+		ctx,
+		&timeOrigin,
+		"select "+
+			"FROM_UNIXTIME((((UNIX_TIMESTAMP(CURTIME()) * 1000000) + MICROSECOND(CURTIME(6))) - (TIMER_START+TIMER_WAIT)/1000000)/1000000) as STARTED "+
+			"FROM performance_schema.events_statements_current WHERE END_EVENT_ID IS NULL",
+	)
 	if err != nil {
 		panic(err)
 	} else if len(timeOrigin) != 1 {
