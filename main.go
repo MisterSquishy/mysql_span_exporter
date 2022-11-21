@@ -227,9 +227,9 @@ func main() {
 		// todo where timestamp > previous poll
 		fmt.Sprintf(
 			"SELECT %s,%s,%s,%s FROM events_statements_history_long se "+
-				"LEFT JOIN events_transactions_history_long te ON se.NESTING_EVENT_ID=te.EVENT_ID "+
-				"LEFT JOIN events_stages_history_long stge ON stge.NESTING_EVENT_ID=se.EVENT_ID "+
-				"LEFT JOIN events_waits_history_long we ON we.NESTING_EVENT_ID=stge.EVENT_ID",
+				"LEFT JOIN events_transactions_history_long te ON se.NESTING_EVENT_ID=te.EVENT_ID AND se.THREAD_ID=te.THREAD_ID "+
+				"LEFT JOIN events_stages_history_long stge ON stge.NESTING_EVENT_ID=se.EVENT_ID AND stge.THREAD_ID=se.THREAD_ID "+
+				"LEFT JOIN events_waits_history_long we ON we.NESTING_EVENT_ID=stge.EVENT_ID AND we.THREAD_ID=stge.THREAD_ID",
 			Columns(TransactionEvent{}),
 			Columns(StatementEvent{}),
 			Columns(StageEvent{}),
@@ -240,23 +240,27 @@ func main() {
 		panic(err)
 	}
 
-	statementsById := map[int64]StatementEvent{}
-	stagesById := map[int64]StageEvent{}
-	waitsById := map[int64]WaitEvent{}
-	stagesByStatementId := map[int64][]StageEvent{}
-	waitsByStageId := map[int64][]WaitEvent{}
+	type uniqueEventId string
+	makeUniqueEventId := func(eventId, threadId int64) uniqueEventId {
+		return uniqueEventId(fmt.Sprintf("%d-%d", eventId, threadId))
+	}
+	statementsById := map[uniqueEventId]StatementEvent{}
+	stagesById := map[uniqueEventId]StageEvent{}
+	waitsById := map[uniqueEventId]WaitEvent{}
+	stagesByStatementId := map[uniqueEventId][]StageEvent{}
+	waitsByStageId := map[uniqueEventId][]WaitEvent{}
 	for _, event := range events {
-		statementId := event.StatementEvent.EventId.Int64
-		stageId := event.StageEvent.EventId.Int64
-		waitId := event.WaitEvent.EventId.Int64
-		if _, ok := statementsById[statementId]; statementId > 0 && !ok {
+		statementId := makeUniqueEventId(event.StatementEvent.EventId.Int64, event.StatementEvent.ThreadId.Int64)
+		stageId := makeUniqueEventId(event.StageEvent.EventId.Int64, event.StageEvent.ThreadId.Int64)
+		waitId := makeUniqueEventId(event.WaitEvent.EventId.Int64, event.WaitEvent.ThreadId.Int64)
+		if _, ok := statementsById[statementId]; event.StatementEvent.EventId.Valid && !ok {
 			statementsById[statementId] = event.StatementEvent
 		}
-		if _, ok := stagesById[stageId]; stageId > 0 && !ok {
+		if _, ok := stagesById[stageId]; event.StageEvent.EventId.Valid && !ok {
 			stagesById[stageId] = event.StageEvent
 			stagesByStatementId[statementId] = append(stagesByStatementId[statementId], event.StageEvent)
 		}
-		if _, ok := waitsById[waitId]; waitId > 0 && !ok {
+		if _, ok := waitsById[waitId]; event.WaitEvent.EventId.Valid && !ok {
 			waitsById[waitId] = event.WaitEvent
 			waitsByStageId[stageId] = append(waitsByStageId[stageId], event.WaitEvent)
 		}
@@ -280,6 +284,8 @@ func main() {
 			statementCtx, statementSpan := tracer.Start(ctx, statement.EventName.String, oteltrace.WithTimestamp(startTime))
 			statementSpan.SetAttributes(
 				// todo add more attributes from struct
+				attribute.Int64("event_id", statement.EventId.Int64),
+				attribute.Int64("thread_id", statement.ThreadId.Int64),
 				attribute.String("sql_text", statement.SqlText.String),
 				attribute.Int("rows_sent", int(statement.RowsSent.Int64)),
 				attribute.Int("rows_examined", int(statement.RowsExamined.Int64)),
@@ -291,15 +297,19 @@ func main() {
 				startTime := timeOrigin[0].Started.Add(time.Duration(stage.TimerStart.Int64) * time.Nanosecond / 1000)
 				stageCtx, stageSpan := tracer.Start(statementCtx, stage.EventName.String, oteltrace.WithTimestamp(startTime))
 				stageSpan.SetAttributes(
+					attribute.Int64("event_id", stage.EventId.Int64),
+					attribute.Int64("thread_id", stage.ThreadId.Int64),
 					attribute.Int64("work_completed", stage.WorkCompleted.Int64),
 					attribute.Int64("work_estimated", stage.WorkEstimated.Int64),
 				)
 
-				waits := waitsByStageId[stage.EventId.Int64]
+				waits := waitsByStageId[makeUniqueEventId(stage.EventId.Int64, stage.ThreadId.Int64)]
 				for _, wait := range waits {
 					startTime := timeOrigin[0].Started.Add(time.Duration(wait.TimerStart.Int64) * time.Nanosecond / 1000)
 					_, waitSpan := tracer.Start(stageCtx, wait.EventName.String, oteltrace.WithTimestamp(startTime))
 					waitSpan.SetAttributes(
+						attribute.Int64("event_id", wait.EventId.Int64),
+						attribute.Int64("thread_id", wait.ThreadId.Int64),
 						attribute.Int64("spins", wait.Spins.Int64),
 						attribute.String("object_schema", wait.ObjectSchema.String),
 						attribute.String("object_name", wait.ObjectName.String),
