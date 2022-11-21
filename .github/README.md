@@ -11,7 +11,6 @@ TODOs:
 
 - split out querier to separate service to better illustrate propagation
 - isolate sql driver instrumentation (the thing that appends the comment) from the above querier service
-- teach the exporter to incorporate transaction/stage/wait data, add more attributes and stuff
-  - debug timer stuff; should we just give up and add the span start time as another piece of propagation data?
-- teach the exporter to check if [perf monitoring](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-statement-tables.html#performance-schema-statement-tables-configuration) is on; optionally turn it on for them
+- teach the exporter to add more attributes and stuff
+- teach the exporter to check if perf monitoring ([statement](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-statement-tables.html#performance-schema-statement-tables-configuration), [stages](https://dev.mysql.com/doc/refman/5.7/en/performance-schema-stage-tables.html#stage-event-configuration), etc...) is on; optionally turn it on for them (how does the mysql exporter deal with this?)
 - make the exporter run on a schedule, dockerize, helmify, etc
