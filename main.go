@@ -8,6 +8,7 @@ import (
 	"os"
 	"reflect"
 	"regexp"
+	"strconv"
 	"strings"
 	"time"
 
@@ -23,6 +24,10 @@ import (
 	"go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
 	oteltrace "go.opentelemetry.io/otel/trace"
+)
+
+const (
+	scrapePeriod = 5 * time.Second
 )
 
 var tracer oteltrace.Tracer
@@ -50,22 +55,45 @@ func newExporter(w io.Writer) (trace.SpanExporter, error) {
 func newResource() *resource.Resource {
 	return resource.NewWithAttributes(
 		semconv.SchemaURL,
-		semconv.ServiceNameKey.String("mysql_span_exporter_test"),
+		semconv.ServiceNameKey.String("mysql"),
 		semconv.ServiceVersionKey.String("0.0.1"),
 		attribute.String("environment", "dev"),
 	)
 }
 
-var traceparentRegex = regexp.MustCompile(`traceparent: ([^\s]+)`)
+var traceparentRegex = regexp.MustCompile(`traceparent='([^\s]+)'`)
+
+// WHY
+type NullUInt64 uint64
+
+// Scan implements the Scanner interface.
+func (n *NullUInt64) Scan(value any) error {
+	if value == nil {
+		*n = 0
+		return nil
+	}
+	switch typedVal := value.(type) {
+	case []byte:
+		parsed, err := strconv.ParseUint(string(typedVal), 10, 64)
+		if err != nil {
+			return err
+		}
+		*n = NullUInt64(parsed)
+	default:
+		return fmt.Errorf("invalid type for NullUInt64: %V", value)
+	}
+
+	return nil
+}
 
 type TransactionEvent struct {
 	ThreadId   sql.NullInt64  `db:"te.THREAD_ID"`
 	EventId    sql.NullInt64  `db:"te.EVENT_ID"`
 	EndEventId sql.NullInt64  `db:"te.END_EVENT_ID"`
 	EventName  sql.NullString `db:"te.EVENT_NAME"`
-	TimerStart sql.NullInt64  `db:"te.TIMER_START"`
-	TimerEnd   sql.NullInt64  `db:"te.TIMER_END"`
-	TimerWait  sql.NullInt64  `db:"te.TIMER_WAIT"`
+	TimerStart NullUInt64     `db:"te.TIMER_START"`
+	TimerEnd   NullUInt64     `db:"te.TIMER_END"`
+	TimerWait  NullUInt64     `db:"te.TIMER_WAIT"`
 	State      sql.NullString `db:"te.STATE"`
 	GTID       sql.NullString `db:"te.GTID"`
 }
@@ -75,9 +103,9 @@ type StatementEvent struct {
 	EventId              sql.NullInt64  `db:"se.EVENT_ID"`
 	EndEventId           sql.NullInt64  `db:"se.END_EVENT_ID"`
 	EventName            sql.NullString `db:"se.EVENT_NAME"`
-	TimerStart           sql.NullInt64  `db:"se.TIMER_START"`
-	TimerEnd             sql.NullInt64  `db:"se.TIMER_END"`
-	TimerWait            sql.NullInt64  `db:"se.TIMER_WAIT"`
+	TimerStart           NullUInt64     `db:"se.TIMER_START"`
+	TimerEnd             NullUInt64     `db:"se.TIMER_END"`
+	TimerWait            NullUInt64     `db:"se.TIMER_WAIT"`
 	LockTime             sql.NullInt64  `db:"se.LOCK_TIME"`
 	SqlText              sql.NullString `db:"se.SQL_TEXT"`
 	MySQLErrNo           sql.NullInt64  `db:"se.MYSQL_ERRNO"`
@@ -111,9 +139,9 @@ type StageEvent struct {
 	EventId       sql.NullInt64  `db:"stge.EVENT_ID"`
 	EndEventId    sql.NullInt64  `db:"stge.END_EVENT_ID"`
 	EventName     sql.NullString `db:"stge.EVENT_NAME"`
-	TimerStart    sql.NullInt64  `db:"stge.TIMER_START"`
-	TimerEnd      sql.NullInt64  `db:"stge.TIMER_END"`
-	TimerWait     sql.NullInt64  `db:"stge.TIMER_WAIT"`
+	TimerStart    NullUInt64     `db:"stge.TIMER_START"`
+	TimerEnd      NullUInt64     `db:"stge.TIMER_END"`
+	TimerWait     NullUInt64     `db:"stge.TIMER_WAIT"`
 	WorkCompleted sql.NullInt64  `db:"stge.WORK_COMPLETED"`
 	WorkEstimated sql.NullInt64  `db:"stge.WORK_ESTIMATED"`
 }
@@ -123,9 +151,9 @@ type WaitEvent struct {
 	EventId             sql.NullInt64  `db:"we.EVENT_ID"`
 	EndEventId          sql.NullInt64  `db:"we.END_EVENT_ID"`
 	EventName           sql.NullString `db:"we.EVENT_NAME"`
-	TimerStart          sql.NullInt64  `db:"we.TIMER_START"`
-	TimerEnd            sql.NullInt64  `db:"we.TIMER_END"`
-	TimerWait           sql.NullInt64  `db:"we.TIMER_WAIT"`
+	TimerStart          NullUInt64     `db:"we.TIMER_START"`
+	TimerEnd            NullUInt64     `db:"we.TIMER_END"`
+	TimerWait           NullUInt64     `db:"we.TIMER_WAIT"`
 	Spins               sql.NullInt64  `db:"we.SPINS"`
 	ObjectSchema        sql.NullString `db:"we.OBJECT_SCHEMA"`
 	ObjectName          sql.NullString `db:"we.OBJECT_NAME"`
@@ -165,6 +193,8 @@ type TimeOrigin struct {
 	Started time.Time `db:"STARTED"`
 }
 
+var db *sqlx.DB
+
 func main() {
 	ctx := context.Background()
 
@@ -196,18 +226,27 @@ func main() {
 		}
 	}()
 	otel.SetTracerProvider(tp)
-	tracer = tp.Tracer("mysql_exporter_test")
+	tracer = tp.Tracer("mysql")
 	/* tracing setup end */
 
-	db, err := sqlx.Connect("mysql", "root:@tcp(127.0.0.1:3306)/performance_schema?parseTime=true&loc=UTC")
+	db, err = sqlx.Connect("mysql", "root:@tcp(127.0.0.1:3306)/performance_schema?parseTime=true&loc=UTC")
 	if err != nil {
 		panic(err)
 	}
-	query()
 	defer db.Close()
 
+	ticker := time.NewTicker(scrapePeriod)
+	var cursor uint64
+	for range ticker.C {
+		fmt.Printf("scraping events after %d\n", cursor)
+		cursor = recordSpans(cursor)
+	}
+}
+
+func recordSpans(cursor uint64) (newCursor uint64) {
+	ctx := context.Background()
 	timeOrigin := []TimeOrigin{}
-	err = db.SelectContext(
+	err := db.SelectContext(
 		ctx,
 		&timeOrigin,
 		"select "+
@@ -224,12 +263,13 @@ func main() {
 	err = db.SelectContext(
 		ctx,
 		&events,
-		// todo where timestamp > previous poll
 		fmt.Sprintf(
 			"SELECT %s,%s,%s,%s FROM events_statements_history_long se "+
 				"LEFT JOIN events_transactions_history_long te ON se.NESTING_EVENT_ID=te.EVENT_ID AND se.THREAD_ID=te.THREAD_ID "+
 				"LEFT JOIN events_stages_history_long stge ON stge.NESTING_EVENT_ID=se.EVENT_ID AND stge.THREAD_ID=se.THREAD_ID "+
-				"LEFT JOIN events_waits_history_long we ON we.NESTING_EVENT_ID=stge.EVENT_ID AND we.THREAD_ID=stge.THREAD_ID",
+				"LEFT JOIN events_waits_history_long we ON we.NESTING_EVENT_ID=stge.EVENT_ID AND we.THREAD_ID=stge.THREAD_ID "+
+				fmt.Sprintf("WHERE se.TIMER_START > %d ", cursor)+
+				"ORDER BY se.TIMER_START DESC",
 			Columns(TransactionEvent{}),
 			Columns(StatementEvent{}),
 			Columns(StageEvent{}),
@@ -238,6 +278,11 @@ func main() {
 	)
 	if err != nil {
 		panic(err)
+	} else if len(events) == 0 {
+		// no events in previous period
+		return
+	} else {
+		newCursor = uint64(events[0].StatementEvent.TimerStart)
 	}
 
 	type uniqueEventId string
@@ -280,7 +325,7 @@ func main() {
 
 			// statementEvent.TimerStart is in picoseconds since the start of the server
 			// fixme or does the timer start after the server? how do i figure out when the timer started???
-			startTime := timeOrigin[0].Started.Add(time.Duration(statement.TimerStart.Int64) * time.Nanosecond / 1000)
+			startTime := timeOrigin[0].Started.Add(time.Duration(statement.TimerStart) * time.Nanosecond / 1000)
 			statementCtx, statementSpan := tracer.Start(ctx, statement.EventName.String, oteltrace.WithTimestamp(startTime))
 			statementSpan.SetAttributes(
 				// todo add more attributes from struct
@@ -294,7 +339,7 @@ func main() {
 
 			stages := stagesByStatementId[statementId]
 			for _, stage := range stages {
-				startTime := timeOrigin[0].Started.Add(time.Duration(stage.TimerStart.Int64) * time.Nanosecond / 1000)
+				startTime := timeOrigin[0].Started.Add(time.Duration(stage.TimerStart) * time.Nanosecond / 1000)
 				stageCtx, stageSpan := tracer.Start(statementCtx, stage.EventName.String, oteltrace.WithTimestamp(startTime))
 				stageSpan.SetAttributes(
 					attribute.Int64("event_id", stage.EventId.Int64),
@@ -305,7 +350,8 @@ func main() {
 
 				waits := waitsByStageId[makeUniqueEventId(stage.EventId.Int64, stage.ThreadId.Int64)]
 				for _, wait := range waits {
-					startTime := timeOrigin[0].Started.Add(time.Duration(wait.TimerStart.Int64) * time.Nanosecond / 1000)
+					// todo link to the span holding the lock??
+					startTime := timeOrigin[0].Started.Add(time.Duration(wait.TimerStart) * time.Nanosecond / 1000)
 					_, waitSpan := tracer.Start(stageCtx, wait.EventName.String, oteltrace.WithTimestamp(startTime))
 					waitSpan.SetAttributes(
 						attribute.Int64("event_id", wait.EventId.Int64),
@@ -316,17 +362,19 @@ func main() {
 						attribute.String("object_type", wait.ObjectType.String),
 						attribute.String("object_instance_begin", wait.ObjectInstanceBegin.String),
 					)
-					endTime := timeOrigin[0].Started.Add(time.Duration(wait.TimerEnd.Int64) * time.Nanosecond / 1000)
+					endTime := timeOrigin[0].Started.Add(time.Duration(wait.TimerEnd) * time.Nanosecond / 1000)
 					waitSpan.End(oteltrace.WithTimestamp(endTime))
 
 				}
 
-				endTime := timeOrigin[0].Started.Add(time.Duration(stage.TimerEnd.Int64) * time.Nanosecond / 1000)
+				endTime := timeOrigin[0].Started.Add(time.Duration(stage.TimerEnd) * time.Nanosecond / 1000)
 				stageSpan.End(oteltrace.WithTimestamp(endTime))
 			}
 
-			endTime := timeOrigin[0].Started.Add(time.Duration(statement.TimerEnd.Int64) * time.Nanosecond / 1000)
+			endTime := timeOrigin[0].Started.Add(time.Duration(statement.TimerEnd) * time.Nanosecond / 1000)
 			statementSpan.End(oteltrace.WithTimestamp(endTime))
 		}
 	}
+
+	return newCursor
 }
