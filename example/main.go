@@ -133,6 +133,39 @@ func main() {
 		w.Write([]byte(fmt.Sprintf("created a new query span with id %s\n", span.SpanContext().SpanID())))
 	})
 
+	http.HandleFunc("/create_user", func(w http.ResponseWriter, r *http.Request) {
+		ctx, span := tracer.Start(ctx, "insert")
+		defer span.End()
+
+		tx, err := db.Begin()
+		if err != nil {
+			span.RecordError(err)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+
+		_, err = tx.QueryContext(
+			ctx,
+			"SELECT User FROM user FOR UPDATE",
+		)
+		if err != nil {
+			span.RecordError(err)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+
+		// times out waiting for above lock
+		_, err = tx.ExecContext(ctx, "INSERT INTO user (User) VALUES ($1)", "newguy")
+		if err != nil {
+			span.RecordError(err)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+
+		tx.Commit()
+		w.Write([]byte(fmt.Sprintf("created a new query span with id %s\n", span.SpanContext().SpanID())))
+	})
+
 	http.HandleFunc("/lock", func(w http.ResponseWriter, r *http.Request) {
 		go func() {
 			ctx, span := tracer.Start(ctx, "lock")
