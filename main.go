@@ -36,6 +36,7 @@ func main() {
 	defer tp.Shutdown(ctx)
 	otel.SetTracerProvider(tp)
 	tracer = tp.Tracer("mysql")
+	otel.SetTextMapPropagator(propagation.TraceContext{})
 
 	tracedDB, err := otelsql.Open("mysql", "root:@tcp(localhost:3306)/performance_schema?parseTime=true&loc=UTC",
 		otelsql.WithAttributes(
@@ -63,7 +64,7 @@ func main() {
 	ticker := time.NewTicker(scrapePeriod)
 	var cursor uint64
 	for range ticker.C {
-		fmt.Printf("scraping events after %d\n", cursor)
+		fmt.Printf("scraping events ending after %d\n", cursor)
 		cursor = recordSpans(cursor)
 	}
 }
@@ -79,6 +80,7 @@ func recordSpans(cursor uint64) (newCursor uint64) {
 		panic(err)
 	}
 
+	// extract events from the performance schema
 	events, err := extractEvents(ctx, cursor)
 	if err != nil {
 		panic(err)
@@ -86,10 +88,10 @@ func recordSpans(cursor uint64) (newCursor uint64) {
 		// no events in previous period, shortcircuit
 		return
 	} else {
-		newCursor = uint64(events[0].StatementEvent.TimerStart)
+		newCursor = uint64(events[0].StatementEvent.TimerEnd)
 	}
 
-	// munge events into tree structure
+	// transform events into tree structure
 	statementsById := map[uniqueEventId]StatementEvent{}
 	stagesById := map[uniqueEventId]StageEvent{}
 	waitsById := map[uniqueEventId]WaitEvent{}
@@ -116,7 +118,7 @@ func recordSpans(cursor uint64) (newCursor uint64) {
 		}
 	}
 
-	// make spans
+	// load the events as spans
 	for statementId, statement := range statementsById {
 		if statement.SqlText.Valid {
 			traceparentMatches := traceparentRegex.FindStringSubmatch(statement.SqlText.String)
@@ -189,7 +191,7 @@ func extractEvents(ctx context.Context, cursor uint64) ([]Event, error) {
 				"LEFT JOIN events_stages_history_long stge ON stge.NESTING_EVENT_ID=se.EVENT_ID AND stge.THREAD_ID=se.THREAD_ID "+
 				"LEFT JOIN events_waits_history_long we ON we.NESTING_EVENT_ID=stge.EVENT_ID AND we.THREAD_ID=stge.THREAD_ID "+
 				fmt.Sprintf("WHERE se.TIMER_START > %d ", cursor)+
-				"ORDER BY se.TIMER_START DESC",
+				"ORDER BY se.TIMER_END DESC",
 			Columns(TransactionEvent{}),
 			Columns(StatementEvent{}),
 			Columns(StageEvent{}),

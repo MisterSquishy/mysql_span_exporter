@@ -90,6 +90,7 @@ func main() {
 	}()
 	otel.SetTracerProvider(tp)
 	tracer := tp.Tracer("demo_app")
+	// currently the exporter depends on this propagator; could extend to allow others
 	otel.SetTextMapPropagator(propagation.TraceContext{})
 	/* tracing setup end */
 
@@ -143,8 +144,9 @@ func main() {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
+		defer tx.Commit()
 
-		_, err = tx.QueryContext(
+		_, err = tx.ExecContext(
 			ctx,
 			"SELECT User FROM user FOR UPDATE",
 		)
@@ -154,15 +156,13 @@ func main() {
 			return
 		}
 
-		// times out waiting for above lock
-		_, err = tx.ExecContext(ctx, "INSERT INTO user (User) VALUES ($1)", "newguy")
+		_, err = tx.ExecContext(ctx, "INSERT INTO user (User, ssl_cipher, x509_issuer, x509_subject) VALUES(?,'','', '')", "newguy")
 		if err != nil {
 			span.RecordError(err)
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
 
-		tx.Commit()
 		w.Write([]byte(fmt.Sprintf("created a new query span with id %s\n", span.SpanContext().SpanID())))
 	})
 
