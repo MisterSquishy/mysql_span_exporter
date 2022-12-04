@@ -18,7 +18,7 @@ import (
 )
 
 const (
-	scrapePeriod = 5 * time.Second
+	scrapeInterval = 5 * time.Second
 )
 
 var traceparentRegex = regexp.MustCompile(`traceparent='([^\s]+)'`)
@@ -61,7 +61,9 @@ func main() {
 	}
 	defer db.Close()
 
-	ticker := time.NewTicker(scrapePeriod)
+	enablePerfMonitoring(ctx)
+
+	ticker := time.NewTicker(scrapeInterval)
 	var cursor uint64
 	for range ticker.C {
 		fmt.Printf("scraping events ending after %d\n", cursor)
@@ -204,4 +206,32 @@ func extractEvents(ctx context.Context, cursor uint64) ([]Event, error) {
 	}
 	sp.AddEvent("scraped_events", oteltrace.WithAttributes(attribute.Int("num_events", len(events))))
 	return events, nil
+}
+
+// fixme we should probably make sure the user is cool with us doing this for them
+func enablePerfMonitoring(ctx context.Context) {
+	execStatement := func(statement string) {
+		_, err := db.ExecContext(ctx, statement)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	// fixme raise performance_schema_max_sql_text_length somehow
+	// https://dev.mysql.com/doc/mysql-perfschema-excerpt/8.0/en/performance-schema-system-variables.html#sysvar_performance_schema_max_sql_text_length
+
+	statements := []string{
+		"UPDATE performance_schema.setup_instruments SET ENABLED = 'YES', TIMED = 'YES' WHERE NAME LIKE 'wait/%'",
+		"UPDATE performance_schema.setup_consumers SET ENABLED = 'YES' WHERE NAME LIKE 'events_waits%'",
+		"UPDATE performance_schema.setup_instruments SET ENABLED = 'YES', TIMED = 'YES' WHERE NAME LIKE 'stage/%'",
+		"UPDATE performance_schema.setup_consumers SET ENABLED = 'YES' WHERE NAME LIKE 'events_stages%'",
+		"UPDATE performance_schema.setup_instruments SET ENABLED = 'YES', TIMED = 'YES' WHERE NAME LIKE 'statement/%'",
+		"UPDATE performance_schema.setup_consumers SET ENABLED = 'YES' WHERE NAME LIKE '%statements%'",
+		"UPDATE performance_schema.setup_instruments SET ENABLED = 'YES', TIMED = 'YES' WHERE NAME = 'transaction'",
+		"UPDATE performance_schema.setup_consumers SET ENABLED = 'YES' WHERE NAME LIKE 'events_transactions%'",
+	}
+
+	for _, statement := range statements {
+		execStatement(statement)
+	}
 }

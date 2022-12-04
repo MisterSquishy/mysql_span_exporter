@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"database/sql"
 	"fmt"
 	"io"
 	"net/http"
@@ -134,7 +133,7 @@ func main() {
 		w.Write([]byte(fmt.Sprintf("created a new query span with id %s\n", span.SpanContext().SpanID())))
 	})
 
-	http.HandleFunc("/create_user", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/lock_users", func(w http.ResponseWriter, r *http.Request) {
 		ctx, span := tracer.Start(ctx, "insert")
 		defer span.End()
 
@@ -155,49 +154,14 @@ func main() {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
-
-		_, err = tx.ExecContext(ctx, "INSERT INTO user (User, ssl_cipher, x509_issuer, x509_subject) VALUES(?,'','', '')", "newguy")
-		if err != nil {
-			span.RecordError(err)
-			w.WriteHeader(http.StatusInternalServerError)
-			return
-		}
+		// take a nap
+		span.AddEvent("im sleepy")
+		time.Sleep(10 * time.Second)
+		span.AddEvent("ok releasing lock")
 
 		w.Write([]byte(fmt.Sprintf("created a new query span with id %s\n", span.SpanContext().SpanID())))
 	})
 
-	http.HandleFunc("/lock", func(w http.ResponseWriter, r *http.Request) {
-		go func() {
-			ctx, span := tracer.Start(ctx, "lock")
-			defer span.End()
-			span.AddEvent("ima do a lock now")
-
-			// start a transaction
-			tx, err := db.BeginTx(ctx, &sql.TxOptions{})
-			if err != nil {
-				span.RecordError(err)
-				w.WriteHeader(http.StatusInternalServerError)
-				return
-			}
-			defer tx.Commit()
-
-			// grab an exclusive lock on the users table
-			_, err = db.ExecContext(
-				ctx,
-				"LOCK TABLES User WRITE",
-			)
-			if err != nil {
-				span.RecordError(err)
-				w.WriteHeader(http.StatusInternalServerError)
-				return
-			}
-
-			// take a nap
-			span.AddEvent("im sleepy")
-			time.Sleep(10 * time.Second)
-			span.AddEvent("ok releasing lock")
-		}()
-	})
 	fmt.Println("starting server on :8000")
 	err = http.ListenAndServe(":8000", nil)
 	if err != nil {

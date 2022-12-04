@@ -10,7 +10,8 @@ very basic example
 
 TODOs:
 
+- why dont we get a wait event for queries that have to wait for a table lock??
 - teach the exporter to add more attributes and stuff
   - can we link wait spans to the span holding the lock???
-- teach the exporter to check if perf monitoring ([statement](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-statement-tables.html#performance-schema-statement-tables-configuration), [stages](https://dev.mysql.com/doc/refman/5.7/en/performance-schema-stage-tables.html#stage-event-configuration), etc..., also set `performance_schema_max_sql_text_length`) is on; optionally turn it on for them (how does the mysql exporter deal with this?)
+- teach the exporter to check if perf monitoring is on; optionally turn it on (how does the mysql metrics exporter deal with this?)
 - containerize, helmify, etc
